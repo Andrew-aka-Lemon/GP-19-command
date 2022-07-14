@@ -1,0 +1,13 @@
+.container{
+@include mobile {
+    width: 320px;
+}
+
+@include tablet {
+    width: 768px;
+}
+
+@include desktop {
+    width: 1200px;
+}
+}
