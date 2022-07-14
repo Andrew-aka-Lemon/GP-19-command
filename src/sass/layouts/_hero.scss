@@ -1,0 +1,22 @@
+
+.hero {
+    background: #FFB8CA;
+}
+
+.hero-title {
+    &__top {
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+    }
+    &__botton {
+    font-weight: 400;
+font-size: 48px;
+line-height: 96.5%;
+text-transform: uppercase;
+color: #D41443;
+}
+}
