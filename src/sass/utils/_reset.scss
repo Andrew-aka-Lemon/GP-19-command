@@ -1,0 +1,38 @@
+.list {
+  list-style: none;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* agent Styles reset */
+body,
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  // width: 100%;
+}
+
+/* --- Прибираємо чорний аутлайн при фокусі --- */
+* {
+  outline: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

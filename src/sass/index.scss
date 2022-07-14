@@ -1,9 +1,12 @@
+@import './utils/reset';
 @import './utils/normalize';
 @import './utils/vars';
+@import './utils/visually-hidden';
 
-@import './common/container';
 @import './common/fonts';
 @import './common/mixin';
+@import './common/container';
+@import './common/section';
 
 @import './layouts/header';
 @import './layouts/buy-modal';
