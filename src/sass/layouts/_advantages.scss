@@ -1,0 +1,29 @@
+.advantages {
+    background-color: var(--secondary-bg-color);
+    
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.70;
+        color: var(--main-text-color);
+    }
+
+    &__item-style {
+        @include font(36px, 400, 1.14, 0.04em);
+        font-family: 'Titan One';
+        text-transform: uppercase;
+        color: #D41443;
+    }
+    &__icon::before {
+        content:'';
+        width: 50px;
+        height: 50px;
+        
+    }
+
+}
