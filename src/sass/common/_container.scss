@@ -4,12 +4,11 @@
     margin: 0 auto;
    
     @include mobile{
-        width: 320px;
+    width: 320px;
     }
 
     @include tablet {
- 
-    width: 768px;
+     width: 768px;
     padding: 0 16px;
     }
 
