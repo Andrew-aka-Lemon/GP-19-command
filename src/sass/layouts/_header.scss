@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     font-weight: 700;
+    background-color: pink;
 
 
     .container {
@@ -70,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     width: 210px;
 
     margin-right: auto;
@@ -80,6 +81,7 @@
     height: 44px;
     border-radius: 22px;
 
+    font-weight: 700;
     font-size: 16px;
     line-height: calc(21 / 16);
     text-align: center;
@@ -129,22 +131,26 @@
 }
 
 .mob-menu-container {
-    position: relative;
     margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 320px;
+    height: 100%;
+    background-color: none;
 }
 
 
 .mob-menu {
     position: absolute;
     top: 0;
-    left: 0;;
-    max-width: 320px;
+    right:0;
+    width: 100%;
     height: 100%;
     background-color: #E17992;
     font-weight: 700;
 
     @include tablet {
-        width: 45%;
+        width: 254px;
         right: 0;
     }
 }
@@ -167,7 +173,6 @@
     fill: currentColor;
 
 }
-
 
 .mob-menu__list {
     margin-top: 19px;
@@ -198,3 +203,8 @@
 .mob-menu__link--accent {
     color: var(--accent-color);
 }
+
+
+
+
+
