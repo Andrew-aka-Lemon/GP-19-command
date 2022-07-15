@@ -3,45 +3,22 @@
     width: 320px;
     height: 502px;
     background: #FFB8CA;
+    padding-left: 20px;
     &__products-container {
+    // background-image: radial-gradient(
+    // circle at center,#FFA5BA 60%);
     border-radius: 50%;
     width: 345px;
     height: 345px;
     background: #FFA5BA;
-    }
-    &__button-content {
-    width: 63px;
-    height: 24px;
-font-weight: 400;
-font-size: 8px;
-line-height: 10px;
-color: #FFFFFF;
-background: #D41443;
-border-radius: 20px;
-display: flex;
-align-items: center;
-text-align: center;
-justify-content: center
-    }
-    &__button-ready {
-width: 83px;
-height: 24px;
-font-weight: 400;
-font-size: 8px;
-line-height: 10px;
-color: #D41443;
-background: #FFFFFF;
-border-radius: 20px;
-display: flex;
-align-items: center;
-text-align: center;
-justify-content: center
     }
 }
 
 .hero-title {
     width: 220px;
     height: 106px;
+    left: auto;
+    margin-bottom: 20px;
     &__top {
 font-weight: 400;
 font-size: 26px;
@@ -57,4 +34,37 @@ line-height: 96.5%;
 text-transform: uppercase;
 color: #D41443;
 }
+}
+.hero-button {
+    display: flex;
+    
+&__content {
+    width: 63px;
+    height: 24px;
+font-weight: 400;
+font-size: 8px;
+line-height: 10px;
+color: #FFFFFF;
+background: #D41443;
+border-radius: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+margin-right: 8px;
+    }
+    &__ready {
+width: 83px;
+height: 24px;
+font-weight: 400;
+font-size: 8px;
+line-height: 10px;
+color: #D41443;
+background: #FFFFFF;
+border-radius: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center
+    }
 }
