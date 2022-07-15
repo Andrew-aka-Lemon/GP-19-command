@@ -19,11 +19,12 @@
         text-transform: uppercase;
         color: #D41443;
     }
-    &__icon::before {
+    &__icon-milk::before {
         display: block;
         content:"";
-        width: 50px;
-        height: 50px;
+        margin-bottom: 16px;
+        width: 33px;
+        height: 30px;
         background-image: url(../images/svg/milk.svg);
         background-repeat: no-repeat;
         
