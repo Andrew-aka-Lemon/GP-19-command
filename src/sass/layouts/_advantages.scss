@@ -1,9 +1,17 @@
-.advantages {
+.section-advantages {
+    padding-top: 40px;
+    padding-bottom: 60px;
     background-color: var(--secondary-bg-color);
+}
+
+
+.advantages {
+
     
     &__list {
         list-style: none;
     }
+    
 
     &__item {
 
@@ -13,21 +21,54 @@
         color: var(--main-text-color);
     }
 
+    &__item:nth-child(2) {
+        margin-top: 16px;
+        margin-bottom: 4px;
+    }
+
     &__item-style {
         @include font(36px, 400, 1.14, 0.04em);
+        width: 98px;
+        height: 56px;
         font-family: 'Titan One';
         text-transform: uppercase;
         color: #D41443;
     }
-    &__icon-milk::before {
+    &__icon-icecream::before {
         display: block;
-        content:"";
+        content: "";
         margin-bottom: 16px;
         width: 33px;
-        height: 30px;
+        height: 50px;
         background-image: url(../images/svg/milk.svg);
         background-repeat: no-repeat;
-        
+        background-size: contain;
+        }
+
+    &__icon-fruit::before{
+        display: block;
+        content: "";
+        margin-top: 32px;
+        margin-bottom: 16px;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/svg/apple-bucket.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__icon-senses::before {
+        display: block;
+        content: "";
+        margin-top: 32px;
+        margin-bottom: 16px;
+        width: 44px;
+        height: 50px;
+        background-image: url(../images/svg/heart.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
 }
+
+      
