@@ -128,11 +128,17 @@
     }
 }
 
+.mob-menu-container {
+    position: relative;
+    margin-top: 60px;
+}
+
+
 .mob-menu {
     position: absolute;
     top: 0;
     left: 0;;
-    width: 100%;
+    max-width: 320px;
     height: 100%;
     background-color: #E17992;
     font-weight: 700;
@@ -162,10 +168,6 @@
 
 }
 
-.mob-menu-container {
-    margin-top: 60px;
-
-}
 
 .mob-menu__list {
     margin-top: 19px;
