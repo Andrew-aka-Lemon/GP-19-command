@@ -53,27 +53,32 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    transform: rotate(-100);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 250ms border var(--timing-animation);
+    background-color: var(--round-color);
+    transition: 250ms transform var(--timing-animation);
   
-    &:focus {
-        border: 3px solid rgba(0, 0, 0, 0.3);
+    &:hover, &:focus {
+            transform: rotate(100);
       }
   }
   
-  .link-icon-close > use {
+  .link-icon-close {
     width: 20px;
     height: 20px;
-    fill: currentColor;
-    transition: 250ms fill var(--timing-animation);
+    stroke: var(--accent-color);
+    transform: rotate(0deg);
+    transition: 250ms fill var(--timing-animation),
+    250ms transform var(--timing-animation);
     display: flex;
   
     &:hover,
       &:focus {
-        fill: var(--accent-color);
+        stroke: var(--round-color);
+        transform: rotate(180deg);
       }
   }
   
@@ -107,13 +112,16 @@
     color: var(--secondary-text-color);
     transition: 250ms fill var(--timing-animation);
 
-    &:hover {
+    &:hover, &:focus-within {
     border: 3px solid var(--round-color);
     }
+    .check:checked ~ & {
+    border: 3px solid var(--accent-color);
+    }
 
-        .check:checked + & {
-            border-color: var(--accent-color);
-        }
+    @media screen and (max-width: 720px) {
+        font-size: smaller;
+    }
 }
 
   .delivery {
@@ -129,23 +137,31 @@
   .delivery-menu {
     display: flex;
     align-items: center;
+
+    &:not(:last-child) {
+            margin-bottom: 10px;
+        }
   }
 
-  .delivery-menu:not(:last-child) {
-    margin-bottom: 10px;
-  }
+
 
   .cow-pic, .courier-pic, .helicopter-pic {
     position: absolute;
     top: 10px;
     left: 200px;
     width: 30%;
-    transform: scale(0%);
+    // transform: scale(0%);
+    opacity: 0;
     transition: transform 250ms var(--timing-animation);
   }
 
-  .radio_label:hover > .cow-pic {
-    transform: scale(100%);
+  .cow:hover .cow-pic {
+    // transform: scale(100%);
+    opacity: 1;
+  }
+
+  .helicopter:hover > .helicopter-pic {
+    opacity: 1;
   }
 
 .radio_input {
