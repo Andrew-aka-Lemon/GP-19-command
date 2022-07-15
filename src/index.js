@@ -1,7 +1,9 @@
+///////////////////EL - скрипт для головної модалки Buy Now//////////////////////
+
 const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    backdrop: document.querySelector('[data-modal]'),
+    closeModalBtn: document.querySelector(".close-modal-button-buynow"),
+    backdrop: document.querySelector(".backdrop-buynow"),
   };
   
   refs.openModalBtn.addEventListener('click', toggleModal);
