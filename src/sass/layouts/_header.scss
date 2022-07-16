@@ -1,6 +1,6 @@
 .header {
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 0;
     width: 100%;
     font-weight: 700;
@@ -137,14 +137,22 @@
 
 
 .mob-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
+    right:0;
+    width: 100vw;
+    height: 100vh;
     background-color: #E17992;
     font-weight: 700;
-z-index: 1;
+    z-index: 5;
+    pointer-events: all;
+    visibility: visible;
+    // transform: translateX(0%);
+        // scale: 1;
+        opacity: 1;
+        // transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
+        transition: all 500ms var(--timing-animation);
+
     @include tablet {
         width: 254px;
         right: 0;
@@ -205,21 +213,19 @@ z-index: 1;
 
 .mob-menu--active {
 
-    transform: translateX(0%);
-    transform: scale(1);
-    // opacity: 1;
-    transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
+   
 
 }
 
-.mob-menu--hide {
+.mob-menu.mob-menu--hide {
     transform: translateX(100%);
-    transform: scale(0);
+    // scale: 0;
 
-    // opacity: 0;
-    transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
-
+    opacity: 0;
+    // transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
+    transition: all 500ms var(--timing-animation);  
+    pointer-events: none;
+    visibility: hidden;
 }
-
 
 
