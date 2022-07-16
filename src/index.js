@@ -35,6 +35,6 @@ const refs = {
   
   function toggleModal() {
     refs.backdrop.classList.toggle('is-hidden');
-    refs.ищвн.classList.toggle('no-scroll');
+    refs.body.classList.toggle('no-scroll');
 
   }

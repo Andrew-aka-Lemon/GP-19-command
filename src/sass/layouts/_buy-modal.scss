@@ -9,10 +9,10 @@
     transition: opacity 250ms var(--timing-animation);
   }
   
-//   .backdrop.is-hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//   }
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
   
   .modal-buynow {
     min-width: 320px;
@@ -34,11 +34,11 @@
     overflow-y: scroll;
     z-index: 0;
   
-    // .backdrop.is-hidden & {
-    //   transform: translate(-50%, -50%) scale(1.2);
-    //   opacity: 0;
-    //   visibility: hidden;
-    // }
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0;
+      visibility: hidden;
+    }
   
     @include desktop {
     width: 528px;
