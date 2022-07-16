@@ -1,0 +1,96 @@
+.hero {
+    background-color: #FFB8CA;
+    overflow: hidden;
+    position: relative;
+
+    &-container {
+    padding-top: 194px;
+    padding-bottom: 158px;
+    }
+}
+
+
+.hero-title {
+    width: 218px;
+    height: 106px;
+    z-index: 2;
+position: relative;
+    
+    &__top {
+font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF; 
+    }
+    &__botton {
+font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 96.5%;
+text-transform: uppercase;
+color: #D41443;
+}
+}
+
+
+.hero-button {
+    right: auto;
+    z-index: 2;
+position: relative;
+    display: flex;
+    margin-top: 20px;
+    &__content {
+        width: 63px;
+        height: 24px;
+font-weight: 400;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+background: #D41443;
+border-radius: 20px;
+margin-right: 8px;
+    }
+    &__ready {
+        width: 83px;
+        height: 24px;
+font-weight: 400;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #D41443;
+background: #FFFFFF;
+border-radius: 20px;
+    }
+}
+
+.background {
+    position: absolute;
+    border-radius: 50%;
+    width: 346px;
+    height: 344px;
+    background: #FFA5BA;
+    top: 20%;
+    left: 20%;
+}
+
+
+.background::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/hero-images/hero-ice-cream-mob.png);
+    width: 171px;
+    height: 410px;
+    right: 30%;
+}
