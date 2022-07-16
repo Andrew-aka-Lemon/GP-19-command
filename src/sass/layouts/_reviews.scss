@@ -1,6 +1,6 @@
 
 .reviews {
-    width: 100%;
+    min-width: 320px;
     height: 570px;
     margin: 100px auto 0;
     position: relative;
@@ -25,14 +25,16 @@
 }
 
 .reviews .controls {
-    left: 50%;
-    margin-left: -98px;
     position: absolute;
+    left: 50%;
+    transform: translate(-72px, -93px);
+    padding-bottom: 45px;
 }
 
 .slides__foto {
-    display: flex;
-    justify-content: center
+    // display: flex;
+    // justify-content: center
+    transform: translate(100px, 01px);
 }
 .slides__img {
     // position: absolute;
@@ -49,9 +51,10 @@
     // padding-left: 65px;
     // margin-top: 100px;
 }
+.text-bdr {
+    background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 31px);
+}
 .slides__text {
-    // width: 157px;
-    // height: 239px;
     font-weight: 500;
     font-size: 12px;
     line-height: 255%;
@@ -60,7 +63,7 @@
     padding-top: 32px;
     padding-right: 75px;
     padding-left: 65px;
-    background: linear-gradient(#0a0a0a 50%);
+    // background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 31px);
     // border: 1px solid #000000;
     }
 
@@ -76,23 +79,31 @@
     }
 
 .slides__name {
-    width: 172px;
-    height: 73px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.26;
     text-align: center;
     color: #000000;
     padding-top: 46px;
-    padding-left: 50px;
-        // border: 1px solid #000000;
+    // padding-left: 50px;
+    // border: 1px solid #000000;
+    }
+
+    .slides__name::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 4px;
+        background-image: url("../images/svg/red-dots.svg");
+        position: absolute;
+        top: 393px;
+        left: 114px;
     }
 
     .slides__title {
-    display: flex;
+    // display: flex;
+    text-align: center;
     }
-
-
 
 .reviews label:after {
     background: #ddd;
@@ -131,10 +142,7 @@
 #slide2:checked~.controls label:nth-of-type(2),
 #slide3:checked~.controls label:nth-of-type(3)
  {
-    background-image: url("../images/svg/house-checkbox.svg");
-    width: 13px;
-    height: 12px;
-    fill: red;
+  background-image: url("../images/svg/house-checkbox.svg");
 }
 
 .slides {
@@ -216,10 +224,3 @@
 //     text-align: center;
 // }
 // ==================================
-
-* {
-    // -webkit-box-sizing: border-box;
-    // -moz-box-sizing: border-box;
-    // -o-box-sizing: border-box;
-    // box-sizing: border-box;
-}
