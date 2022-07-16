@@ -50,6 +50,9 @@
         @include tablet {
             padding-bottom: 5%;
         }
+        @include desktop {
+            padding-bottom: 4%;
+        }
     }
 }
 
@@ -61,6 +64,9 @@
         @include tablet {
             padding-top: 23%;
             margin-bottom: 5%;
+        }
+        @include desktop {
+            margin-bottom: 6%;
         }
     }
 }
@@ -91,6 +97,9 @@
             padding-top: 38%;
             margin-bottom: 5%;
         }
+        @include desktop {
+            margin-bottom: 6%;
+        }
     }
 }
 
@@ -102,6 +111,9 @@
         @include tablet {
             padding-bottom: 10%;
             margin-top: 5%;
+        }
+        @include desktop {
+            margin-top: 6%;
         }
     }
 }
@@ -117,7 +129,6 @@
 }
 
 .gallery__image {
-    max-width: 100%;
     border-radius: 8px;
 
     @include tablet {
