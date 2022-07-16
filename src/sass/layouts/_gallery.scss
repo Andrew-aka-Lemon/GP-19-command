@@ -9,6 +9,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+        @include tablet {
+        background-image: linear-gradient(to bottom,
+                #FFF5F6 55%,
+                #FFFFFF 55%,
+            );
+        }
+        @include desktop {
+        background-image: linear-gradient(to bottom,
+                #FFF5F6 35%,
+                #FFFFFF 35%,
+            );
+        }
     .container{
         display: flex;
         align-items: center;
@@ -23,10 +35,14 @@
     list-style: none;
     justify-content: center;
     margin-right: 0.75%;
-    // @media screen {
-        
-    // }
-    // flex-direction: column;
+        @include tablet {
+            min-width: 110px;
+            // min-height: 581px;
+        }
+        @include desktop {
+            min-width: 148px;
+            // min-height: 581px;
+        }
 }
 
 .column-position1 {
@@ -69,7 +85,7 @@
     }
 }
 
-
 .gallery__image {
+    max-width: 100%;
     border-radius: 8px;
 }
