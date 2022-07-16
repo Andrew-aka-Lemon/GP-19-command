@@ -39,6 +39,7 @@ color: #D41443;
 
 
 .hero-button {
+    right: auto;
     z-index: 2;
 position: relative;
     display: flex;
@@ -88,7 +89,7 @@ border-radius: 20px;
 .background::after {
     position: absolute;
     content: "";
-    background-image: url(/src/images/hero-images/hero-ice-cream-mob.png);
+    background-image: url(../images/hero-images/hero-ice-cream-mob.png);
     width: 171px;
     height: 410px;
     right: 30%;
