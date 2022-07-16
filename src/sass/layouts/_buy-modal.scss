@@ -125,8 +125,13 @@
 }
 
   .delivery {
-    margin: 30px 0;
+    // margin: 30px 0;
     position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 20px 19px #ffffff;;
+    padding: 10px 10px;
+    margin: 30px 0;
+
   }
 
   .delivery-list {
@@ -143,26 +148,73 @@
         }
   }
 
+  .cow, .courier, .helicopter {
+    color: var(--round-color);
 
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+
+  }
 
   .cow-pic, .courier-pic, .helicopter-pic {
     position: absolute;
     top: 10px;
     left: 200px;
     width: 30%;
-    // transform: scale(0%);
-    opacity: 0;
+
     transition: transform 250ms var(--timing-animation);
   }
 
-  .cow:hover .cow-pic {
-    // transform: scale(100%);
-    opacity: 1;
-  }
+    .cow:hover:before {
+        content: "";
+        background-image: url(/src/images/buy-now/cow.jpg);
+        position: absolute;
+        display: block;
+        height: 120%;
+        width: 100%;
+        top: 0;
+        left: 150;
+        background-repeat: no-repeat;
 
-  .helicopter:hover > .helicopter-pic {
-    opacity: 1;
-  }
+            @media screen and (min-width: 720px) {
+                    left: 200;
+                }
+    }
+
+        .courier:hover:before {
+            content: "";
+            background-image: url(/src/images/buy-now/courier.jpg);
+            position: absolute;
+            display: block;
+            height: 130%;
+            width: 100%;
+            top: 0;
+            left: 150;
+            background-repeat: no-repeat;
+
+            @media screen and (min-width: 720px) {
+            left: 200;    
+            }
+        }
+
+        .helicopter:hover:before,
+                .helicopter:focus:before {
+            content: "";
+            background-image: url(/src/images/buy-now/helicopter.jpg);
+            position: absolute;
+            display: block;
+            height: 120%;
+            width: 100%;
+            top: 0;
+            left: 150;
+            background-repeat: no-repeat;
+
+            @media screen and (min-width: 720px) {
+            left: 200;    
+            }
+        }
+  
 
 .radio_input {
     width: 0;
@@ -206,17 +258,9 @@
         transition: 0.2s ease-in;
 }
 
-.radio_input:checked+.custom-radio-btn::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.radio_label {
-    cursor: pointer;
-    color: var(--secondary-text-color);
-    &:hover {
-        color: var(--accent-color);
+    .radio_input:checked+.custom-radio-btn::before {
+        transform: translate(-50%, -50%) scale(1);
     }
-}
 
   .modal-form-buynow {
     width: 100%;
@@ -232,7 +276,7 @@
     border-radius: 4px;
     transition: 250ms border-color var(--timing-animation);
     outline: transparent;
-    padding-left: 42px;
+    padding-left: 10px;
   
     &:hover,
       &:focus {
