@@ -195,6 +195,10 @@
 .contacts__button:focus > .arrow-right {
   border-top: 2px solid#d41443;
   border-right: 2px solid#d41443;
+  transform: rotate(225deg);
+  transition-property: transform, border-right, border-top;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 // -------------------------MODAL-------------------------------
