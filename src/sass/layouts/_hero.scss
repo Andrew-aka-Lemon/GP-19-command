@@ -14,26 +14,26 @@
     width: 218px;
     height: 106px;
     z-index: 2;
-position: relative;
+    position: relative;
     
     &__top {
-font-family: 'Titan One';
-font-style: normal;
-font-weight: 400;
-font-size: 26px;
-line-height: 30px;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: #FFFFFF; 
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF; 
     }
     &__botton {
-font-family: 'Titan One';
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 96.5%;
-text-transform: uppercase;
-color: #D41443;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 96.5%;
+    text-transform: uppercase;
+    color: #D41443;
 }
 }
 
@@ -41,41 +41,41 @@ color: #D41443;
 .hero-button {
     right: auto;
     z-index: 2;
-position: relative;
+    position: relative;
     display: flex;
     margin-top: 20px;
     &__content {
-        width: 63px;
-        height: 24px;
-font-weight: 400;
-font-size: 8px;
-line-height: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: #FFFFFF;
-background: #D41443;
-border-radius: 20px;
-margin-right: 8px;
+    width: 63px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #D41443;
+    border-radius: 20px;
+    margin-right: 8px;
     }
     &__ready {
-        width: 83px;
-        height: 24px;
-font-weight: 400;
-font-size: 8px;
-line-height: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: #D41443;
-background: #FFFFFF;
-border-radius: 20px;
+    width: 83px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #D41443;
+    background: #FFFFFF;
+    border-radius: 20px;
     }
 }
 
-.background {
+.background-hero {
     position: absolute;
     border-radius: 50%;
     width: 346px;
@@ -86,7 +86,7 @@ border-radius: 20px;
 }
 
 
-.background::after {
+.background-hero::after {
     position: absolute;
     content: "";
     background-image: url(../images/hero-images/hero-ice-cream-mob.png);
