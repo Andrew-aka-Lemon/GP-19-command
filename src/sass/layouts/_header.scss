@@ -131,7 +131,7 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 320px;
-    height: 100vh;
+    height: 100%;
     background-color: none;
 }
 
@@ -144,10 +144,13 @@
     height: 100%;
     background-color: #E17992;
     font-weight: 700;
-
+z-index: 1;
     @include tablet {
         width: 254px;
         right: 0;
+    }
+    @include desktop{
+        display: none;
     }
 }
 
