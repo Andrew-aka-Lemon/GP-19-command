@@ -23,7 +23,7 @@
 ///////////////////EL - скрипт для головної модалки Buy Now//////////////////////
 
 const refs = {
-    openModalBtn: document.querySelector(".modal-button"),
+    openModalBtn: document.querySelector(".modal-button-header"),
     closeModalBtn: document.querySelector(".close-modal-button-buynow"),
     backdrop: document.querySelector(".backdrop-buynow"),
   };
@@ -34,7 +34,7 @@ const refs = {
   refs.backdrop.addEventListener('click', logBackdropClick);
   
   function toggleModal() {
-    refs.backdrop.classList.toggle('is-hidden');
+    refs.backdrop.classList.toggle('hidden');
     refs.body.classList.toggle('no-scroll');
 
   }
