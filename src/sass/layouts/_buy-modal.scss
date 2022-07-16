@@ -40,11 +40,16 @@
       visibility: hidden;
     }
   
-    @include desktop {
-    width: 528px;
-      min-height: 581px;
-    }
+    // @include desktop {
+    // width: 528px;
+    //   min-height: 581px;
+    // }
+
+    @media screen and (min-width: 720px) {
+    max-height: 800px;
   }
+
+}
   
   .close-modal-button-buynow {
     position: absolute;
