@@ -59,6 +59,8 @@
 
     margin-left: auto;
 
+    transition: all var(--timing-animation) 1000ms;
+
     @include tablet {}
 
     @include desktop {
@@ -231,10 +233,10 @@
 .cow-feature{
     position: absolute;
     top: 30%;
-    left: -90%;
+    left: -100%;
     width: 300px;
     height: 300px;
-    background-image: url("../images/header-img/cow-balloon-rope-min.png") ;
+    background-image: url("../images/header-img/cow-balloon-min.png") ;
     z-index: 6;
     background-size: contain;
     background-repeat: no-repeat;
