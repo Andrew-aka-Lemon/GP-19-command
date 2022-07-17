@@ -148,11 +148,9 @@
     z-index: 5;
     pointer-events: all;
     visibility: visible;
-    // transform: translateX(0%);
-        // scale: 1;
         opacity: 1;
-        // transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
-        transition: all 1000ms var(--timing-animation);
+        transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
+        // transition: all 1000ms var(--timing-animation);
 
     @include tablet {
         width: 254px;
@@ -223,7 +221,7 @@
     // scale: 0;
 
     // opacity: 0;
-    // transition: transform 500ms var(--timing-animation), translateX 500ms var(--timing-animation), scale 10ms var(--timing-animation) 500ms;
+    // transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
     transition: all 1000ms var(--timing-animation);  
     pointer-events: none;
     visibility: hidden;
@@ -233,10 +231,10 @@
 .cow-feature{
     position: absolute;
     top: 30%;
-    left: -100%;
+    left: -90%;
     width: 300px;
     height: 300px;
-    background-image: url("/src/images/header-img/cow-balloon-min.png") ;
+    background-image: url("../images/header-img/cow-balloon-rope-min.png") ;
     z-index: 6;
     background-size: contain;
     background-repeat: no-repeat;
