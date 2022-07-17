@@ -9,7 +9,7 @@
     transition: opacity 250ms var(--timing-animation);
   }
   
-  .backdrop.is-hidden {
+  .backdrop.hidden {
     opacity: 0;
     pointer-events: none;
   }
@@ -359,71 +359,71 @@
     }
   }
   
-// //   .check-icon {
-// //     fill: transparent;
-// //   }
+   .check-icon {
+     fill: transparent;
+   }
   
-// //   .policy span {
-// //     width: 16px;
-// //     height: 15px;
-// //     border: 2px solid #212121;
-// //     border-radius: 3px;
-// //     margin-right: 9px;
-// //     display: flex;
-// //     align-items: center;
-// //     justify-content: center;
+   .policy span {
+     width: 16px;
+     height: 15px;
+     border: 2px solid #212121;
+     border-radius: 3px;
+     margin-right: 9px;
+     display: flex;
+    align-items: center;
+     justify-content: center;
   
-// //     .modal-check:checked+& {
-// //         background-color: var(--accent-color);
-// //         border: none;
-// //       }
-// //   }
+     .modal-check:checked+& {
+        background-color: var(--accent-color);
+         border: none;
+       }
+   }
   
-// //   .modal-check:checked + .policy .check-icon {
-// //     fill: #ffffff;
-// //   }
+   .modal-check:checked + .policy .check-icon {
+     fill: #ffffff;
+  }
   
-//   /* 
-//   .policy::before {
-//     content: "";
-//     width: 16px;
-//     height: 15px;
-//     border: 2px solid #212121;
-//     border-radius: 3px;
-//     margin-right: 9px;
-//   } */
+   
+  .policy::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+    margin-right: 9px;
+  } 
   
-//   /* .modal-check:checked + .policy::before {
-//     background-color: var(--second-text-color);
-//   } */
+   .modal-check:checked + .policy::before {
+    background-color: var(--second-text-color);
+  } 
   
-//   .modal-button {
-//     font-family: 'Titan One';
-//     font-size: 16px;
-//     font-weight: 700;
-//     line-height: calc(30 / 16);
-//     letter-spacing: 0.06em;
-//     color: #ffffff;
-//     width: 200px;
-//     height: 50px;
-//     background-color: var(--background-color);
-//     cursor: pointer;
-//     padding: 10px 32px;
-//     border-radius: 4px;
-//     border: 1px solid transparent;
-//     display: block;
-//     text-align: center;
-//     margin: auto;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     transition: width 250ms var(--timing-animation),
-//       height 250ms var(--timing-animation);
+  .modal-button {
+    font-family: 'Titan One';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    background-color: var(--background-color);
+    cursor: pointer;
+    padding: 10px 32px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    display: block;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: width 250ms var(--timing-animation),
+      height 250ms var(--timing-animation);
   
-//       &:hover {
-//           width: 203px;
-//           height: 51px;
-//             color: var(--accent-color);
-//         }
-//   }
+      &:hover {
+          width: 203px;
+          height: 51px;
+            color: var(--accent-color);
+        }
+  }
   
   
   
