@@ -1,11 +1,35 @@
 .footer {
   position: relative;
 
-  padding-top: 40px;
+  // padding-top: 40px;
   background-color: var(--secondary-bg-color);
 
   &__left-side {
     width: 234px;
+
+    @include tablet {
+      width: 340px;
+    }
+  }
+
+  &-alignment {
+    margin-bottom: 40px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__right-side {
+    padding-right: 4px;
+    align-self: flex-end;
   }
 }
 
@@ -18,6 +42,14 @@
   color: #ffa5ba;
 
   margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: calc(30 / 26);
+    letter-spacing: 0.04em;
+
+    margin-bottom: 12px;
+  }
 }
 
 .general-title {
@@ -29,7 +61,15 @@
 
   color: var(--accent-color);
 
-  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: calc(55 / 48);
+    letter-spacing: 0.06em;
+  }
 }
 
 .social {
@@ -51,13 +91,30 @@
   }
 }
 
+.copy-thumb {
+  padding-top: 16px;
+  padding-bottom: 3px;
+
+  @include tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include desktop {
+    padding-top: 7px;
+    padding-bottom: 4px;
+  }
+}
+
 .contacts-footer {
   font-weight: 700;
   font-size: 12px;
   line-height: 1.86;
   text-align: right;
 
-  margin-bottom: 56px;
+  @include tablet {
+    margin-bottom: 19px;
+  }
 }
 
 .contacts-footer__mob-number {
@@ -65,8 +122,6 @@
 }
 
 .copyright {
-  // position: relative;
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
@@ -74,21 +129,25 @@
 
   color: var(--secondary-text-color);
 
-  &--mb {
-    margin-bottom: 3px;
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    margin: 0 auto;
+  }
 
-    &::before {
-      content: '';
-      display: block;
+  &::before {
+    content: '';
+    display: block;
 
-      position: absolute;
-      bottom: 61px;
-      left: 0;
+    position: absolute;
+    bottom: 61px;
 
-      width: 100vw;
-      // max-width: 320px;
-      height: 1px;
-      background-color: #e1e1e1;
+    @include tablet {
+      bottom: 42px;
     }
+    left: 0;
+
+    width: 100vw;
+    height: 1px;
+    background-color: #e1e1e1;
   }
 }
