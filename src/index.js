@@ -1,17 +1,18 @@
 // Margo-js script for modal how its made
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    modal: document.querySelector("[data-modal]"),
+    openModalBtn: document.querySelector('.button-about-open'),
+    closeModalBtn: document.querySelector('.js-close-button'),
+    modal: document.querySelector('.about-menu'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle("is-hidden");
+    document.body.classList.toggle('modal-open');
+    refs.modal.classList.toggle('hidden');
+    refs.body.classList.toggle('prevent-scroll');
   }
 })();
 
