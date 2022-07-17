@@ -102,7 +102,7 @@
     margin-top: 0px;
 }
 
-.button-about {
+.button-about-open {
     width: 176px;
     height: 44px;
     padding-left: 37px;
@@ -142,10 +142,9 @@
         padding-left: 15px;
         background-color: #FFA5BA;
         color: #FFF5F6;
-    //    background-image: url(../images/about-images/about-bgmilk-mob.png);
         text-align: justify;
         font-size: 14px;
-        display: none;
+        // display: none;
         position: fixed;
         top: 0%;
         left: 0%;
@@ -153,9 +152,9 @@
         height: 100vh;
         z-index: 1;
 
-        &.is-open {
-            display: block;
-        }
+        // &.is-open {
+            // display: block;
+        // }
 
         .container__about {
             display: flex;
@@ -179,18 +178,38 @@
     }
 }
 
+.container__about{
+    position: relative;
+}
+
 .about-modul__picture {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
 }
 
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.about-menu .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.about-menu.is-hidden .container__about {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
 .modal__text{
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     justify-content: center;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 50px;
     margin-bottom: 10px;
 }
 
@@ -206,4 +225,21 @@
     margin-left: 0px;
     margin-right: 5px;
     margin-top: 10px;
+}
+
+.js-close-button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+}
+
+.js-icon--about{
+    text-align: center;
+    justify-content: center;
+
 }

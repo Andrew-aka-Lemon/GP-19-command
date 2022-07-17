@@ -50,15 +50,12 @@
 <p class="about--product">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
                     
 <p class="about--product production"> Aliquam erat volutpat. Aenean  accumsan.</p>
-<button type="button" class="button-about menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="about-menu">Read more <img class="about__icon" src="./images/svg/continiue.svg" alt=" " width="5" height="8">
+<button type="button" class="button-about-open"data-modal-open>Read more <img class="about__icon" src="./images/svg/continiue.svg" alt=" " width="5" height="8">
         </button>
-       <div class="about-menu js-about-menu is-open" id="about-menu" >
+       <div class="about-menu is-hidden" id="about-menu"data-modal  >
     <div class="container__about">
-    <button type="button" class="menu-toggle js-close-menu" >
-        <svg class="" width="40" height="40">
-                </svg>
+    <button type="button" class="js-close-button"data-modal-close >
+        <img class="js-icon--about" src="./images/svg/close-menu.svg" alt=" ">
 </button>
 <h2 class="modal__text">How We Make Ice Cream</h2>
 <img src="./images/products-images/product1-mob@2x.png" class="about-modul__picture" alt="" width="60" height="60">
