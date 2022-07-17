@@ -120,6 +120,49 @@
   color: #ffffff;
 }
 
+.hero-button-arrow {
+  width: 18px;
+  height: 18px;
+}
+
 .hero-icon-arrow {
-  fill: #ffffff;
+  width: 8px;
+  height: 8px;
+  color: #d41443;
+  fill: currentColor;
+  background-color: #ffffff;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.hero-title-content {
+  position: absolute;
+}
+
+.hero-title-content {
+  position: absolute;
+}
+
+.hero-soc-title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+.hero-soc-text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  text-align: right;
+  color: #ffffff;
 }
