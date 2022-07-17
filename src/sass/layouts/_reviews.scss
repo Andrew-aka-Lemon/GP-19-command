@@ -47,13 +47,48 @@
     transform: translate(100px, 01px);
     @include tablet {
         transform: translate(260px, 01px);
+
+    }
+}
+.controls {
+    padding-bottom: 65px;
+    transform: translate(32%, 0%);
+    padding-bottom: 45px;
+    @include tablet {
+        transform: translate(50%, 163%);
+        }
+    @include desktop {
+        transform: translate(-45%, -170%);
+    }
+}
+.reviews .controls {
+    margin-left: -98px;
+    position: absolute;
+    left: 50%;
+    @include tablet {
+        top: 50%;
+        left: 50%;
+    }
+    @include desktop {
+        top: 100%;
+        left: 58%;
+    }
+}
+
+.slides__foto {
+    transform: translate(29%, -40%);
+    @include tablet {
+        transform: translate(41%, -40%);
+        }
+    @include desktop {
+        transform: translate(42%, -39%);
         }
 }
-.slides__img {
-    // position: absolute;
-    // right: 45%;
-    // bottom: 50%;
-}
+// .slides__img {
+//     // position: absolute;
+//     // right: 45%;
+//     // bottom: 50%;
+// }
 
 .slides__bgr {
     width: 280px;
@@ -65,17 +100,30 @@
         height: 164px;
         padding-top: 20px;
         padding-bottom: 36px;
-        }
+    }
     @include desktop {
-        width: 750px;
-        height: 164px;
+        width: 968px;
+        height: 138px;
         padding-top: 20px;
         padding-bottom: 36px;
                 }
-
-}
+    }
 .text-bdr {
     background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 31px);
+    width: 180px;
+    height: 248px;
+    @include tablet {
+        background: repeating-linear-gradient(0deg, #e1e1e1 0 2px, #fafafa 2px 36px);
+        width: 550px;
+        height: 108px;
+        padding-right: 25px;
+    }
+    @include desktop {
+        background: repeating-linear-gradient(0deg, #e1e1e1 0 2px, #fafafa 2px 38px);
+        width: 822px;
+        height: 75px;
+        padding-right: 25px;
+    }
 }
 .slides__text {
     font-weight: 500;
@@ -91,6 +139,9 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 216%;
+        padding-right: 50px;
+        padding-left: 55px;
+        padding-top: 10px;
     }
     @include desktop {
         font-weight: 500;
@@ -109,8 +160,8 @@
     top: 100px;
     left: 42px;
     @include tablet {
-        left: 22px;
-        top: 114px; 
+        top: 95px;
+        left: 50px;  
     }
     }
 
@@ -141,6 +192,10 @@
             top: 250px;
             left: 290px;
             }
+        @include desktop{
+            top: 245px;
+            left: 434px;
+        }
     }
 
     .slides__title {
