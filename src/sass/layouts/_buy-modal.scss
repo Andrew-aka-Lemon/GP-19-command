@@ -341,61 +341,61 @@
       }
   }
   
-  // .policy {
-  //   font-weight: 400;
-  //   font-size: 12px;
-  //   line-height: calc(14/12);
+  .policy {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
   
-  //   letter-spacing: 0.03em;
-  //   color: #757575;
-  //   margin-bottom: 30px;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
-  //   @include desktop {
-  //     font-size: 14px;
-  //     line-height: calc(24 / 14);
-  //   }
-  // }
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
   
-  //  .check-icon {
-  //    fill: transparent;
-  //  }
+   .check-icon {
+     fill: transparent;
+   }
   
-  //  .policy span {
-  //    width: 16px;
-  //    height: 15px;
-  //    border: 2px solid #212121;
-  //    border-radius: 3px;
-  //    margin-right: 9px;
-  //    display: flex;
-  //   align-items: center;
-  //    justify-content: center;
+   .policy span {
+     width: 16px;
+     height: 15px;
+     border: 2px solid #212121;
+     border-radius: 3px;
+     margin-right: 9px;
+     display: flex;
+    align-items: center;
+     justify-content: center;
   
-  //    .modal-check:checked+& {
-  //       background-color: var(--accent-color);
-  //        border: none;
-  //      }
-  //  }
+     .modal-check:checked+& {
+        background-color: var(--accent-color);
+         border: none;
+       }
+   }
   
-  //  .modal-check:checked + .policy .check-icon {
-  //    fill: #ffffff;
-  // }
+   .modal-check:checked + .policy .check-icon {
+     fill: #ffffff;
+  }
   
    
-  // .policy::before {
-  //   content: "";
-  //   width: 16px;
-  //   height: 15px;
-  //   border: 2px solid #212121;
-  //   border-radius: 3px;
-  //   margin-right: 9px;
-  // } 
+  .policy::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+    margin-right: 9px;
+  } 
   
-  //  .modal-check:checked + .policy::before {
-  //   background-color: var(--second-text-color);
-  // } 
+   .modal-check:checked + .policy::before {
+    background-color: var(--second-text-color);
+  } 
   
   .modal-button {
     font-family: 'Titan One';
