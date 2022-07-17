@@ -2,8 +2,10 @@
 .reviews {
     min-width: 320px;
     height: 570px;
-    margin: 100px auto 0;
+    // margin: 100px auto 0;
+    padding-top: 63px;
     position: relative;
+    text-align: center;
     @include tablet {
         width: 620px;
     }
@@ -17,42 +19,49 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     @include tablet {
        width: 620px;
     }
-    @include tablet {
+    @include desktop {
        width: 968px;
- }
+    }
 }
 .reviews > input {
     display: none;
 }
-
-.reviews .controls {
-    position: absolute;
-    left: 50%;
-    transform: translate(-72px, -93px);
+.controls {
+    padding-bottom: 65px;
+    transform: translate(32px, 0px);
     padding-bottom: 45px;
     @include tablet {
-        transform: translate(-70px, -238px);
+        transform: translate(50px, 163px);
         }
+    @include desktop {
+        transform: translate(-63px,-170px)
+    }
+}
+.reviews .controls {
+    left: 55%;
+    margin-left: -98px;
+    position: absolute;
+    left: 50%;
+   
 }
 
 .slides__foto {
     // display: flex;
     // justify-content: center
-    transform: translate(100px, 01px);
+    transform: translate(100px, -23px);
     @include tablet {
-        transform: translate(260px, 01px);
+        transform: translate(260px, -23px);
         }
-}
-.slides__img {
-    // position: absolute;
-    // right: 45%;
-    // bottom: 50%;
+    @include desktop {
+        transform: translate(315px, -15px)
+        }
 }
 
 .slides__bgr {
@@ -126,8 +135,12 @@
         font-size: 16px;
         line-height: 186%;
     }
-    }
 
+    .slides__title {
+    // display: flex;
+    padding-left: 25px;
+    }
+}
     .slides__name::before {
         content: "";
         display: block;
@@ -141,13 +154,20 @@
             top: 250px;
             left: 290px;
             }
+        @include desktop{
+            top: 250px;
+            left: 352px;
+        }
     }
 
     .slides__title {
     text-align: center;
     @include tablet{
-     padding-right: 363px;
-    }
+    //  padding-right: ;
+     }
+     @include desktop {
+        padding-right: 50px;
+     }
     }
 
 .reviews label:after {
@@ -175,7 +195,6 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
-    border-radius: 50%;
     -webkit-transition: background-image ease-in-out .5s;
     -moz-transition: background-image ease-in-out .5s;
     -o-transition: background-image ease-in-out .5s;
@@ -188,6 +207,7 @@
 #slide3:checked~.controls label:nth-of-type(3)
  {
   background-image: url("../images/svg/house-checkbox.svg");
+
 }
 
 .slides {
@@ -232,6 +252,12 @@
 //     border-radius: 50%;
 // }
 
+
+// .slides__img {
+//     // position: absolute;
+//     // right: 45%;
+//     // bottom: 50%;
+// }
 // .reviews {
 //     width:100%;
 //     // height: 200px;
@@ -268,4 +294,18 @@
 // .reviews__chek {
 //     text-align: center;
 // }
-// ==================================
+// * {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     -o-box-sizing: border-box;
+//     box-sizing: border-box;}
+// =========================================
+
+.carousel-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 30%;
+    background-color: #eee;
+    overflow: hidden;
+    border: 2px solid #cc0808;
+}
