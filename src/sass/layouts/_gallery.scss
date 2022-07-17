@@ -1,4 +1,10 @@
 .gallery {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include desktop {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     margin-left: auto;
     margin-right: auto;
     display: block;
