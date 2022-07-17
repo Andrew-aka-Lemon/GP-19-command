@@ -2,11 +2,18 @@
     padding-top: 40px;
     padding-bottom: 60px;
     background-color: var(--secondary-bg-color);
+
+    @include tablet {
+        padding-bottom: 64px;
+    }
 }
 
 
 .advantages {
 
+    @include tablet {
+        display: flex;
+    }
     
     &__list {
         list-style: none;
@@ -19,11 +26,21 @@
         font-size: 12px;
         line-height: 1.70;
         color: var(--main-text-color);
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 1.74;
+        }
     }
 
     &__item:nth-child(2) {
         margin-top: 16px;
         margin-bottom: 4px;
+
+        @include tablet {
+            margin-top: 13px;
+            margin-bottom: 0px;
+        }
     }
 
     &__item-style {
@@ -33,16 +50,26 @@
         font-family: 'Titan One';
         text-transform: uppercase;
         color: #D41443;
+
+        @include tablet {
+            width: auto;
+            height: auto;
+            @include font(48px, 400, 1.15, 0.04em);
+        }
     }
     &__icon-icecream::before {
         display: block;
         content: "";
         margin-bottom: 16px;
-        width: 33px;
+
         height: 50px;
         background-image: url(../images/advantages-images/milk-bucket.png);
         background-repeat: no-repeat;
         background-size: contain;
+
+        @include tablet {
+            margin-bottom: 36px;
+        }
         }
 
     &__icon-fruit::before{
@@ -55,6 +82,11 @@
         background-image: url(../images/advantages-images/apples.png);
         background-repeat: no-repeat;
         background-size: contain;
+
+        @include tablet {
+            margin-top: 0px;
+            margin-bottom: 36px;
+        }
     }
 
     &__icon-senses::before {
@@ -67,10 +99,18 @@
         background-image: url(../images/advantages-images/heart.png);
         background-repeat: no-repeat;
         background-size: contain;
+
+        @include tablet {
+            margin-top: 0px;
+            margin-bottom: 36px;
+        }
     }
 
 }
 .current-container {
     max-width: 230px;
+    @include tablet {
+        max-width: 180px;
+    }
 }
       
