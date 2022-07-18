@@ -50,6 +50,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ffffff;
+
     @include tablet {
       font-size: 22px;
       line-height: 25px;
@@ -63,6 +64,7 @@
     line-height: 96.5%;
     text-transform: uppercase;
     color: #d41443;
+
     @include tablet {
       font-size: 22px;
       line-height: 25px;
@@ -94,6 +96,7 @@
     color: #ffffff;
     background: #d41443;
   }
+
   &__ready {
     display: flex;
     justify-content: center;
@@ -137,6 +140,8 @@
   position: absolute;
   content: '';
   background-image: url(../images/hero-images/hero-ice-cream-mob.png);
+  background-repeat: no-repeat;
+
   width: 171px;
   height: 410px;
 
@@ -146,6 +151,12 @@
   @include tablet {
     left: 74px;
     top: 37px;
+
+    width: 143px;
+    height: 336px;
+
+    background-image: url(../images/hero-images/hero-ice-cream-tab.png);
+    background-repeat: no-repeat;
   }
 }
 
@@ -184,7 +195,35 @@
   color: #d41443;
 }
 
-.hero-soc-text {
+.hero-title__content::after {
+  content: '';
+  display: block;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  position: absolute;
+  top: -2px;
+  right: -10px;
+}
+
+.hero-title__container::after {
+  content: '';
+  display: block;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  position: absolute;
+  top: -1px;
+  right: -8px;
+}
+
+.hero-title__content--text {
   font-weight: 400;
   font-size: 8px;
   line-height: 10px;
