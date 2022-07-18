@@ -21,36 +21,49 @@
   }
 }
 
-.about__product {
-  background-color: var(--secondary-bg-color);
-  padding-bottom: 40px;
-  background-image: url(../images/about-images/about-bgmilk-mob.png);
-  background-position: 20 595;
-  background-repeat: no-repeat;
-  padding-bottom: 20px;
-  background-size: contain;
+.container-about{
+background-size: contain;
   max-width: 100%;
   z-index: 1;
-
-  @include retina {
+  background-image: url(../images/about-images/about-bgmilk-mob.png);
+  background-position: 10 530;
+  background-repeat: no-repeat;
+@include retina {
     background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
   }
-
-  @include tablet {
-    padding-bottom: 60px;
-    background-image: none;
+  @include tablet{
+background-image: none;
   }
   @include desktop {
-    background-image: url(../images/about-images/about-bgmilk-desk.png);
-    background-position: 0 236;
-    background-repeat: no-repeat;
-    padding-bottom: 20px;
-    background-size: contain;
-    max-width: 100%;
+background-image: url(../images/about-images/about-bgmilk-desk.png);
+  background-position: 0 236;
+  background-repeat: no-repeat;
+  max-width: 100%;
     z-index: 1;
+  
     @include retina {
       background-image: url(../images/about-images/about-bgmilk-desk@2x.png);
     }
+  }
+}
+
+.about__product {
+  background-color: var(--secondary-bg-color);
+  padding-bottom: 40px;
+  
+
+
+ 
+
+  @include tablet {
+    padding-bottom: 60px;
+    
+  }
+  @include desktop {
+   
+    padding-bottom: 20px;
+    background-size: contain;
+    
   }
 }
 
@@ -76,7 +89,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   z-index: 1;
 }
@@ -121,7 +134,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.58;
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: left;
   justify-content: left;
   margin-top: 0px;
@@ -142,13 +155,13 @@
 
 .about-text {
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .about--milk {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   position: relative;
   margin-left: 0px;
@@ -231,16 +244,14 @@
 }
 
 .about-menu {
-  @media screen and (max-width: 767px) {
     padding-top: 8px;
     padding-right: 15px;
-    // padding-bottom: 40px;
+    margin-bottom: 40px;
     padding-left: 15px;
-    background-color: var(--round-color);
-    color: var(--secondary-bg-color);
+    background-color: var(--background-color);
+    color: var(--light-text-color);
     text-align: justify;
     font-size: 14px;
-    // display: none;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -248,6 +259,27 @@
     height: 100vh;
     z-index: 1;
     overflow-y: auto;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-size: contain;
+      max-width: 100%;
+      z-index: 1;
+      background-image: url(../images/about-images/about-bgmilk-mob.png);
+        background-position: top;
+        background-repeat: no-repeat;
+      
+        @include retina {
+          background-image: url(../images/about-images/about-bgmilk-mob@2x.png);}
+      @include tablet {
+          position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            height: 609px;
+            width: 450px;
+            // padding: 40px;
+        }
+                
+      
 
     .container-menu {
       display: flex;
@@ -258,8 +290,12 @@
       max-width: 300px;
       margin-left: auto;
       margin-right: auto;
+      @include desktop {
+        max-width: 500px;
+        padding-left: 50px;
+      }
     }
-  }
+  
   @include tablet {
     display: flex;
   }
@@ -284,10 +320,6 @@
   justify-content: center;
 }
 
-.about-menu.is-hidden .container__about {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
 .modal__text {
   font-size: 26px;
   font-weight: 700;
@@ -295,6 +327,8 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 10px;
+  color: var(--accent-color);
+  font-family: titan One;
 }
 
 .modal-about__text {
@@ -316,13 +350,30 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   border-radius: 50%;
   position: absolute;
   top: 10px;
   right: 10px;
+  border-color: var(--light-text-color);
+  @include desktop {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .js-icon--about {
   fill: currentColor;
+}
+
+.about-list {
+    
+   display: block;
+    @include tablet {
+display: inline-flex;
+    gap: 32px;}
+    @include desktop{
+      
+        gap: 99px;
+    }
 }
