@@ -7,12 +7,14 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms var(--timing-animation);
+    z-index: 998;
   }
   
-//   .backdrop.is-hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//   }
+  .backdrop.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+  }
   
   .modal-buynow {
     min-width: 320px;
@@ -32,19 +34,18 @@
     border-radius: 4px;
     padding: 40px;
     overflow-y: scroll;
-    z-index: 0;
   
-    // .backdrop.is-hidden & {
-    //   transform: translate(-50%, -50%) scale(1.2);
-    //   opacity: 0;
-    //   visibility: hidden;
-    // }
-  
-    @include desktop {
-    width: 528px;
-      min-height: 581px;
+    .backdrop.hidden & {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0;
+      visibility: hidden;
     }
-  }
+  
+    @media screen and (min-width: 720px) {
+    max-height: 800px;
+    overflow: hidden;
+    }
+}
   
   .close-modal-button-buynow {
     position: absolute;
@@ -107,22 +108,59 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 3px solid transparent;
-    border-radius: 10%;
+    // border: 3px solid transparent;
+    // border-radius: 10%;
+    position: relative;
     color: var(--secondary-text-color);
     transition: 250ms fill var(--timing-animation);
 
-    &:hover, &:focus-within {
-    border: 3px solid var(--round-color);
-    }
-    .check:checked ~ & {
-    border: 3px solid var(--accent-color);
-    }
+    // &:focus-within
+    // &:hover {
+    // border: 3px solid var(--round-color);
+    // }
+    // .check:checked ~ & {
+    // border: 3px solid var(--accent-color);
+    // }
+
+    &:hover .checkborder {
+            // border: 3px solid var(--round-color);
+            // border-radius: 10%;
+            // display: block;
+            // width: 100px;
+            // height: 130px;
+            // position: absolute;
+            // top: -10;
+            // z-index: 999;
+            opacity: 1;
+        }
 
     @media screen and (max-width: 720px) {
         font-size: smaller;
     }
 }
+
+
+.checkborder {
+    border: 3px solid var(--round-color);
+    border-radius: 10%;
+    display: block;
+    width: 100px;
+    height: 130px;
+    position: absolute;
+    top: -5;
+    z-index: 999;
+    opacity: 0;
+}
+
+
+.check:checked+.checkborder {
+    opacity: 1;
+
+}
+
+// .checkborder:not(:last-child) {
+//     margin-right: 5px;
+// }
 
   .delivery {
     // margin: 30px 0;
@@ -341,62 +379,7 @@
       }
   }
   
-//   .policy {
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: calc(14/12);
-  
-//     letter-spacing: 0.03em;
-//     color: #757575;
-//     margin-bottom: 30px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-  
-//     @include desktop {
-//       font-size: 14px;
-//       line-height: calc(24 / 14);
-//     }
-//   }
-  
-//   .check-icon {
-//     fill: transparent;
-//   }
-  
-//   .policy span {
-//     width: 16px;
-//     height: 15px;
-//     border: 2px solid #212121;
-//     border-radius: 3px;
-//     margin-right: 9px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-  
-//     .modal-check:checked+& {
-//         background-color: var(--accent-color);
-//         border: none;
-//       }
-//   }
-  
-//   .modal-check:checked + .policy .check-icon {
-//     fill: #ffffff;
-//   }
-  
-  /* 
-  .policy::before {
-    content: "";
-    width: 16px;
-    height: 15px;
-    border: 2px solid #212121;
-    border-radius: 3px;
-    margin-right: 9px;
-  } */
-  
-  /* .modal-check:checked + .policy::before {
-    background-color: var(--second-text-color);
-  } */
-  
+
   .modal-button {
     font-family: 'Titan One';
     font-size: 16px;
@@ -435,10 +418,4 @@
     color: var(--secondary-text-color);
     display: block;
     margin-bottom: 4px;
-  }
-  
-  .modal-policy-link {
-    text-decoration-line: underline;
-    color: #2196f3;
-    margin-left: 4px;
   }

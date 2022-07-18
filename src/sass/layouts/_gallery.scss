@@ -1,4 +1,10 @@
 .gallery {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include desktop {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -9,19 +15,22 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-        @include tablet {
+
+    @include tablet {
         background-image: linear-gradient(to bottom,
                 #FFF5F6 55%,
                 #FFFFFF 55%,
             );
-        }
-        @include desktop {
+    }
+
+    @include desktop {
         background-image: linear-gradient(to bottom,
-                #FFF5F6 35%,
-                #FFFFFF 35%,
+                #FFF5F6 27%,
+                #FFFFFF 27%,
             );
-        }
-    .container{
+    }
+
+    .container {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,58 +43,101 @@
     display: inline-block;
     list-style: none;
     justify-content: center;
-    margin-right: 0.75%;
-        @include tablet {
-            min-width: 110px;
-            // min-height: 581px;
-        }
-        @include desktop {
-            min-width: 148px;
-            // min-height: 581px;
-        }
+
+    &:not(:last-child) {
+        margin-right: 0.75%;
+    }
 }
 
 .column-position1 {
     .gallery__item:last-child {
         padding-bottom: 4%;
+
+        @include tablet {
+            padding-bottom: 5%;
+        }
+        @include desktop {
+            padding-bottom: 4%;
+        }
     }
 }
 
 .column-position2 {
-    .gallery__item:first-child{
+    .gallery__item:first-child {
         padding-top: 22%;
         margin-bottom: 4%;
+
+        @include tablet {
+            padding-top: 23%;
+            margin-bottom: 5%;
+        }
+        @include desktop {
+            margin-bottom: 6%;
+        }
     }
 }
 
 .column-position3 {
+    .gallery__item:first-child {
+        @include desktop {
+            width: 100%;
+        }
+    }
+
     .gallery__item:last-child {
         max-width: 50%;
         margin-top: 2%;
+
+        @include tablet {
+            margin-top: 3%;
+        }
     }
 }
 
 .column-position4 {
-    .gallery__item:first-child{
+    .gallery__item:first-child {
         padding-top: 36%;
         margin-bottom: 4%;
+
+        @include tablet {
+            padding-top: 38%;
+            margin-bottom: 5%;
+        }
+        @include desktop {
+            margin-bottom: 6%;
+        }
     }
 }
 
 .column-position5 {
-    .gallery__item:last-child{
+    .gallery__item:last-child {
         padding-bottom: 25%;
         margin-top: 4%;
+
+        @include tablet {
+            padding-bottom: 10%;
+            margin-top: 5%;
+        }
+        @include desktop {
+            margin-top: 6%;
+        }
     }
 }
 
 .column-position6 {
-    .gallery__item:first-child{
+    .gallery__item:first-child {
         padding-top: 12%;
+
+        @include tablet {
+            padding-top: 13%;
+        }
     }
 }
 
 .gallery__image {
-    max-width: 100%;
     border-radius: 8px;
+
+    @include tablet {
+        border-radius: 20px;
+    }
 }
