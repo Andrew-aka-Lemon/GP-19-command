@@ -10,7 +10,8 @@
     z-index: 998;
   }
   
-  .backdrop.hidden {
+  .backdrop-buynow.hidden {
+    transition: opacity 250ms var(--timing-animation);
     opacity: 0;
     pointer-events: none;
   }
@@ -27,22 +28,18 @@
     border-radius: 24px;
     padding: 40px;
     overflow-y: auto;
-    transform: translate(-50%, -50%);
-    transition: transform 500ms var(--timing-animation), opacity 500ms var(--timing-animation);
-    // transform: translate(-50%, -50%);
-    // transition: transform 250ms var(--timing-animation),
-    //     opacity 250ms var(--timing-animation);
-  
-    // .backdrop.hidden & {
-    //   transform: translate(-50%, -50%) scale(0.75);
-    //   opacity: 0;
-
-    // }
+    overflow-x: hidden;
     
-        .backdrop.hidden & {
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-animation), opacity 250ms var(--timing-animation), scale 250ms var(--timing-animation);
+    
+        .backdrop-buynow.hidden & {
+            transition: transform 250ms var(--timing-animation),
+                opacity 250ms var(--timing-animation),
+                scale 250ms var(--timing-animation);
+            transform: translate(-70%, -70%) scale(0.25);
             opacity: 0;
-    visibility: hidden;
+            visibility: hidden;
         }
   
     @media screen and (min-width: 720px) {
@@ -73,7 +70,6 @@
   .link-icon-close {
     width: 16px;
     height: 16px;
-    // stroke: var(--accent-color);
     transform: rotate(0deg);
     transition: 250ms transform var(--timing-animation);
     display: flex;
@@ -206,22 +202,6 @@
                 }
     }
 
-    .cow:focus:before {
-    content: "";
-        background-image: url(/src/images/buy-now/cow.jpg);
-        position: absolute;
-        display: block;
-        height: 120%;
-        width: 100%;
-        top: 0;
-        left: 150;
-        background-repeat: no-repeat;
-    
-        @media screen and (min-width: 720px) {
-            left: 200;
-        }
-    }
-
         .courier:hover:before {
             content: "";
             background-image: url(/src/images/buy-now/courier.jpg);
@@ -238,24 +218,7 @@
             }
         }
 
-                .courier:focus:before {
-                    content: "";
-                    background-image: url(/src/images/buy-now/cow.jpg);
-                    position: absolute;
-                    display: block;
-                    height: 120%;
-                    width: 100%;
-                    top: 0;
-                    left: 150;
-                    background-repeat: no-repeat;
-        
-                    @media screen and (min-width: 720px) {
-                        left: 200;
-                    }
-                }
-
-        .helicopter:hover:before,
-                .helicopter:focus:before {
+        .helicopter:hover:before {
             content: "";
             background-image: url(/src/images/buy-now/helicopter.jpg);
             position: absolute;
@@ -270,23 +233,6 @@
             left: 200;    
             }
         }
-
-        .helicopter:focus:before {
-            content: "";
-            background-image: url(/src/images/buy-now/cow.jpg);
-            position: absolute;
-            display: block;
-            height: 120%;
-            width: 100%;
-            top: 0;
-            left: 150;
-            background-repeat: no-repeat;
-    
-            @media screen and (min-width: 720px) {
-                left: 200;
-            }
-        }
-  
 
 .radio_input {
     width: 0;
@@ -344,6 +290,12 @@
     transition: 250ms border-color var(--timing-animation);
     outline: transparent;
     padding-left: 10px;
+        letter-spacing: .01em;
+            color: var(--secondary-text-color);
+
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.16667;
   
     &:hover,
       &:focus {
