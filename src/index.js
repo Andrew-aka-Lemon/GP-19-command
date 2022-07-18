@@ -77,4 +77,39 @@
 //   function toggleModal() {
 //     refs.backdrop.classList.toggle('hidden');
 //     refs.body.classList.toggle('no-scroll');
-// }
+//   }
+
+// Скритп Саші для Contacts
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('.contacts__button'),
+    closeModalBtn: document.querySelector('.contacts-modal-close-loc__button'),
+    backdrop: document.querySelector('.backdrop-contacts-loc'),
+    body: document.querySelector('body'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.backdrop.classList.toggle('is-hidden');
+    refs.body.classList.toggle('no-scroll');
+  }
+})();
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('.contacts__button__script'),
+    closeModalBtn: document.querySelector('.contacts-modal-close-fr__button'),
+    backdrop: document.querySelector('.backdrop-contacts-fr'),
+    body: document.querySelector('body'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.backdrop.classList.toggle('is-hidden');
+    refs.body.classList.toggle('no-scroll');
+  }
+})();
