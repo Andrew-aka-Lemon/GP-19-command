@@ -41,6 +41,10 @@
     width: 162px;
   }
 
+  @include desktop {
+    width: 277px;
+  }
+
   &__top {
     font-family: 'Titan One';
     font-style: normal;
@@ -110,6 +114,9 @@
     @include desktop {
       font-size: 14px;
       line-height: calc(18 / 14);
+
+      width: 107px;
+      height: 40px;
     }
 
     color: #ffffff;
@@ -132,11 +139,39 @@
     @include desktop {
       font-size: 14px;
       line-height: calc(18 / 14);
+
+      width: 138px;
+      height: 40px;
     }
 
     color: #d41443;
     background: #ffffff;
   }
+}
+
+.hero-button__content,
+.hero-button__ready {
+  transform: scale(100%);
+
+  transition: transform 250ms var(--timing-animation),
+    background-color 250ms var(--timing-animation);
+}
+
+.hero-button__content:hover,
+.hero-button__content:focus {
+  transform: scale(104%);
+
+  transition: transform 250ms var(--timing-animation),
+    background-color 250ms var(--timing-animation);
+}
+
+.hero-button__ready:hover,
+.hero-button__ready:focus {
+  background-color: #ecebeb;
+  transform: scale(104%);
+
+  transition: transform 250ms var(--timing-animation),
+    background-color 250ms var(--timing-animation);
 }
 
 .background-round {
@@ -207,7 +242,7 @@
 
   @include desktop {
     left: 119px;
-    top: 54px;
+    top: 59px;
 
     width: 236px;
     height: 557px;
@@ -236,7 +271,7 @@
 
   @include desktop {
     top: 152px;
-    right: 0;
+    right: 34px;
   }
 }
 
@@ -249,11 +284,11 @@
 
     position: absolute;
     top: 151px;
-    right: 40px;
+    right: 36px;
   }
   @include desktop {
     top: 244px;
-    right: 0;
+    right: 18px;
   }
 }
 
@@ -287,6 +322,14 @@
   right: -10px;
 
   z-index: -1;
+
+  @include desktop {
+    width: 30px;
+    height: 30px;
+
+    top: -4px;
+    right: -18px;
+  }
 }
 
 .hero-title__container::after {
@@ -300,9 +343,17 @@
 
   position: absolute;
   top: 0;
-  right: -3px;
+  right: -8px;
 
   z-index: -1;
+
+  @include desktop {
+    width: 30px;
+    height: 30px;
+
+    top: -3px;
+    right: 0;
+  }
 }
 
 .hero-title__content--text {
@@ -329,14 +380,20 @@
     bottom: 16px;
 
     @include desktop {
+      left: 16px;
+      bottom: 60px;
     }
   }
+
   &__descr {
     position: absolute;
 
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
+
+    @include desktop {
+    }
   }
   &__text {
     width: 114px;
@@ -347,8 +404,12 @@
     margin-bottom: 7px;
 
     @include desktop {
+      width: 200px;
+
       font-size: 14px;
       line-height: 1.4;
+
+      margin-bottom: 20px;
     }
   }
 

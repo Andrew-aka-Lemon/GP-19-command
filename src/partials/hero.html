@@ -23,12 +23,23 @@
 
     <div class="background-round"></div>
     <div class="milk-bucket">
-      <img
-        src="./images/hero-images/hero-milk-tab.png"
-        alt="milk"
-        width="152"
-        height="154"
-      />
+      <picture>
+        <source
+          srcset="
+            ./images/hero-images/hero-milk-desk.png    1x,
+            ./images/hero-images/hero-milk-desk@2x.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero-images/hero-milk-tab.png    1x,
+            ./images/hero-images/hero-milk-tab@2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <img src="./images/hero-images/hero-milk-desk.png" alt="milk" />
+      </picture>
       <div class="milk-bucket__descr">
         <p class="milk-bucket__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -42,12 +53,23 @@
       </div>
     </div>
     <div class="licking-lady">
-      <img
-        src="./images/hero-images/hero-lady-tab.png"
-        alt="lady"
-        width="190"
-        height="150"
-      />
+      <picture>
+        <source
+          srcset="
+            ./images/hero-images/hero-lady-desk.png    1x,
+            ./images/hero-images/hero-lady-desk@2x.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero-images/hero-lady-tab.png    1x,
+            ./images/hero-images/hero-lady-tab@2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <img src="./images/hero-images/hero-lady-tab.png" alt="lady" />
+      </picture>
     </div>
   </div>
 </section>
