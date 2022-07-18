@@ -13,7 +13,6 @@
   .backdrop.hidden {
     opacity: 0;
     pointer-events: none;
-
   }
   
   .modal-buynow {
@@ -24,22 +23,27 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
     visibility: visible;
-    transition: transform 250ms var(--timing-animation),
-      opacity 250ms var(--timing-animation), scale 250ms var(--timing-animation);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: 24px;
     padding: 40px;
     overflow-y: auto;
+    transform: translate(-50%, -50%);
+    transition: transform 500ms var(--timing-animation), opacity 500ms var(--timing-animation);
+    // transform: translate(-50%, -50%);
+    // transition: transform 250ms var(--timing-animation),
+    //     opacity 250ms var(--timing-animation);
   
-    .backdrop.hidden & {
-      transform: translate(-50%, -50%) scale(1.2);
-      opacity: 0;
-      visibility: hidden;
-    }
+    // .backdrop.hidden & {
+    //   transform: translate(-50%, -50%) scale(0.75);
+    //   opacity: 0;
+
+    // }
+    
+        .backdrop.hidden & {
+            transform: translate(-50%, -50%);
+            opacity: 0;
+    visibility: hidden;
+        }
   
     @media screen and (min-width: 720px) {
     max-height: 800px;
@@ -49,16 +53,16 @@
   .close-modal-button-buynow {
     position: absolute;
     top: 8px;
-    right: 8px;
+    right: 15px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: 1px solid var(--accent-color);
     transform: rotate(-100);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--round-color);
+    background-color: #f8e9ed;
     transition: 250ms transform var(--timing-animation);
   
     &:hover, &:focus {
@@ -67,17 +71,16 @@
   }
   
   .link-icon-close {
-    width: 20px;
-    height: 20px;
-    stroke: var(--accent-color);
+    width: 16px;
+    height: 16px;
+    // stroke: var(--accent-color);
     transform: rotate(0deg);
-    transition: 250ms fill var(--timing-animation),
-    250ms transform var(--timing-animation);
+    transition: 250ms transform var(--timing-animation);
     display: flex;
   
     &:hover,
       &:focus {
-        stroke: var(--round-color);
+        // stroke: var(--round-color);
         transform: rotate(180deg);
       }
   }
@@ -143,15 +146,10 @@
 
 .check:checked+.checkborder {
     opacity: 1;
-
 }
 
-// .checkborder:not(:last-child) {
-//     margin-right: 5px;
-// }
 
   .delivery {
-    // margin: 30px 0;
     position: relative;
     background-color: #fff;
     box-shadow: 0 0 20px 19px #ffffff;;
@@ -208,6 +206,22 @@
                 }
     }
 
+    .cow:focus:before {
+    content: "";
+        background-image: url(/src/images/buy-now/cow.jpg);
+        position: absolute;
+        display: block;
+        height: 120%;
+        width: 100%;
+        top: 0;
+        left: 150;
+        background-repeat: no-repeat;
+    
+        @media screen and (min-width: 720px) {
+            left: 200;
+        }
+    }
+
         .courier:hover:before {
             content: "";
             background-image: url(/src/images/buy-now/courier.jpg);
@@ -223,6 +237,22 @@
             left: 200;    
             }
         }
+
+                .courier:focus:before {
+                    content: "";
+                    background-image: url(/src/images/buy-now/cow.jpg);
+                    position: absolute;
+                    display: block;
+                    height: 120%;
+                    width: 100%;
+                    top: 0;
+                    left: 150;
+                    background-repeat: no-repeat;
+        
+                    @media screen and (min-width: 720px) {
+                        left: 200;
+                    }
+                }
 
         .helicopter:hover:before,
                 .helicopter:focus:before {
@@ -240,6 +270,22 @@
             left: 200;    
             }
         }
+
+        .helicopter:focus:before {
+            content: "";
+            background-image: url(/src/images/buy-now/cow.jpg);
+            position: absolute;
+            display: block;
+            height: 120%;
+            width: 100%;
+            top: 0;
+            left: 150;
+            background-repeat: no-repeat;
+    
+            @media screen and (min-width: 720px) {
+                left: 200;
+            }
+        }
   
 
 .radio_input {
@@ -247,34 +293,29 @@
     height: 0;
     position: absolute;
     opacity: 0;
-    z-index: -1;
+    // z-index: -1;
 }
 
 .custom-radio-btn {
     position: relative;
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 28px;
+    height: 28px;
     background: #fff;
-    border: 2px solid var(--accent-color);
+    border: 1px solid transparent;
     border-radius: 50%;
     vertical-align: text-top;
     margin-right: 5px;
-  
-    
-    // .radio_input:checked + .radio-label:checked +&:checked {
-    //     display: inline-block;
-    //     color: var(--accent-color);
-    //     background-image: url(/src/images/header-img/header-logo-pic.png);
-    // }
+     
 }
 
 .custom-radio-btn::before {
     content: '';
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #a3a4a7;
+    width: 25px;
+    height: 25px;
+    background-image: url(/src/images/header-img/header-logo-pic.png);
+    background-repeat: no-repeat;
     border-radius: 50%;
     /* Выравниваем по центру относительно внешнего круга */
         position: absolute;
