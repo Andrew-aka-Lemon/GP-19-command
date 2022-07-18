@@ -7,10 +7,17 @@
     body: document.querySelector('body'),
     HeaderMenuOpen: document.querySelector('.header-menu__button'),
     HeaderModalBtn: document.querySelector('.modal-button-header'),
+    mobMenuLink: document.querySelectorAll('.mob-menu__link'),
+   
   };
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  
+
+  for (let index = 0; index < refs.mobMenuLink.length; index++) {
+    refs.mobMenuLink[index].addEventListener('click', toggleMenu); 
+  }
 
   function toggleMenu() {
     refs.menu.classList.toggle('mob-menu--hide');
