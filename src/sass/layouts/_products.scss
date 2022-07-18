@@ -382,11 +382,10 @@ margin-left: 41px;
     background: rgba(0, 0, 0, 0);
     opacity: 1;
     
-    transform:  opacity var(--timing-duration) var(--timing-function), 
-    visibility var(--timing-duration) var(--timing-function);  
+     
 
    overflow-y: scroll;
- //  z-index: 1;
+  z-index: 2;
 }
 
 .backdrop__products.is-hidden {
