@@ -57,7 +57,8 @@
     }
 
     @include desktop {
-      
+      font-size: 38px;
+      line-height: calc(44 / 38);
     }
   }
 
@@ -72,7 +73,11 @@
 
     @include tablet {
       font-size: 22px;
-      line-height: 25px;
+      line-height: calc(25 / 22);
+    }
+    @include desktop {
+      font-size: 58px;
+      line-height: 0.905;
     }
   }
 }
@@ -83,6 +88,10 @@
   position: relative;
   display: flex;
   margin-top: 20px;
+
+  @include desktop {
+    margin-top: 24px;
+  }
 
   &__content {
     display: flex;
@@ -96,7 +105,12 @@
 
     font-weight: 400;
     font-size: 8px;
-    line-height: 10px;
+    line-height: calc(10 / 8);
+
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(18 / 14);
+    }
 
     color: #ffffff;
     background: #d41443;
@@ -113,8 +127,12 @@
 
     font-weight: 400;
     font-size: 8px;
-    line-height: 10px;
-    text-align: center;
+    line-height: calc(10 / 8);
+
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(18 / 14);
+    }
 
     color: #d41443;
     background: #ffffff;
@@ -138,6 +156,17 @@
   @include tablet {
     top: 10%;
     left: 32%;
+
+    width: 335px;
+    height: 333px;
+  }
+
+  @include desktop {
+    top: 54px;
+    left: 501px;
+
+    width: 534px;
+    height: 534px;
   }
 }
 
@@ -145,6 +174,13 @@
   position: absolute;
   content: '';
   background-image: url(../images/hero-images/hero-ice-cream-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url(../images/hero-images/hero-ice-cream-mob@2x.png);
+  }
+
   background-repeat: no-repeat;
 
   width: 171px;
@@ -155,24 +191,52 @@
 
   @include tablet {
     left: 74px;
-    top: 37px;
+    top: 41px;
 
     width: 143px;
     height: 336px;
 
     background-image: url(../images/hero-images/hero-ice-cream-tab.png);
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @include retina {
+      background-image: url(../images/hero-images/hero-ice-cream-tab@2x.png);
+    }
+  }
+
+  @include desktop {
+    left: 119px;
+    top: 54px;
+
+    width: 236px;
+    height: 557px;
+
+    background-image: url(../images/hero-images/hero-ice-cream-desk.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include retina {
+      background-image: url(../images/hero-images/hero-ice-cream-desk@2x.png);
+    }
   }
 }
 
 .hero-title__content {
   display: none;
+
   @include tablet {
     display: block;
+    z-index: 1;
 
     position: absolute;
     top: 91px;
-    right: 32px;
+    right: 42px;
+  }
+
+  @include desktop {
+    top: 152px;
+    right: 0;
   }
 }
 
@@ -181,10 +245,15 @@
 
   @include tablet {
     display: block;
+    z-index: 1;
 
     position: absolute;
     top: 151px;
-    right: 32px;
+    right: 40px;
+  }
+  @include desktop {
+    top: 244px;
+    right: 0;
   }
 }
 
@@ -193,11 +262,15 @@
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 32px;
-  text-align: right;
+  line-height: calc(32 / 28);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
+
+  @include desktop {
+    font-size: 46px;
+    line-height: calc(53 / 46);
+  }
 }
 
 .hero-title__content::after {
@@ -212,6 +285,8 @@
   position: absolute;
   top: -2px;
   right: -10px;
+
+  z-index: -1;
 }
 
 .hero-title__container::after {
@@ -224,8 +299,10 @@
   background-color: #fff;
 
   position: absolute;
-  top: -1px;
-  right: -8px;
+  top: 0;
+  right: -3px;
+
+  z-index: -1;
 }
 
 .hero-title__content--text {
@@ -234,6 +311,11 @@
   line-height: 10px;
   text-align: right;
   color: #ffffff;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
 }
 
 .milk-bucket {
@@ -263,6 +345,11 @@
     color: #ffffff;
 
     margin-bottom: 7px;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.4;
+    }
   }
 
   .milk-bucket__button {
@@ -272,6 +359,11 @@
 
     width: 18px;
     height: 18px;
+
+    @include desktop {
+      width: 26px;
+      height: 26px;
+    }
 
     border-radius: 50%;
     background-color: #fff;
@@ -293,7 +385,12 @@
     display: block;
 
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     right: 32px;
+  }
+
+  @include desktop {
+    right: 0;
+    bottom: 0;
   }
 }
