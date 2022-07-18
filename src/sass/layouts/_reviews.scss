@@ -2,14 +2,20 @@
     min-width: 320px;
     height: 570px;
     // margin: 100px auto 0;
-    padding-top: 63px;
+    padding-top: 53px;
+    padding-bottom: 32px;
     position: relative;
     text-align: center;
     @include tablet {
         width: 620px;
+        // height: 362px;
+        padding-top: 63px;
+        padding-bottom: 20px;
     }
     @include desktop {
         width: 968px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 
@@ -22,10 +28,10 @@
     text-align: center;
     padding-top: 35px;
     @include tablet {
-        width: 620px;
+        width: 100%;
     }
     @include desktop {
-        width: 968px;
+        width: 100%;
     }
 }
 
@@ -37,39 +43,32 @@
     padding-bottom: 65px;
     transform: translate(32%, 0%);
     padding-bottom: 45px;
-
     @include tablet {
         transform: translate(50%, 163%);
     }
-
     @include desktop {
         transform: translate(-45%, -170%);
     }
 }
 
 .reviews .controls {
-    margin-left: -98px;
     position: absolute;
-    left: 50%;
-
+    left: 17%;
     @include tablet {
         top: 50%;
-        left: 46%;
+        left: 29%;
     }
-
     @include desktop {
-        top: 100%;
-        left: 58%;
+        top: 95%;
+        left: 46%;
     }
 }
 
 .slides__foto {
     transform: translate(29%, -40%);
-
     @include tablet {
-        transform: translate(41%, -40%);
+    transform: translate(42%, -40%);
     }
-
     @include desktop {
         transform: translate(42%, -39%);
     }
@@ -80,40 +79,45 @@
     height: 308px;
     background-color: #FAFAFA;
     text-align: center;
-    padding-left: 40px;
-
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-bottom: 42px;
+    
     @include tablet {
         width: 620px;
         height: 164px;
         padding-top: 20px;
         padding-bottom: 36px;
+        padding-left: 32px;
+        
     }
-
     @include desktop {
         width: 968px;
         height: 138px;
         padding-top: 20px;
         padding-bottom: 36px;
+        padding-left: 70px;
     }
 }
 
 .text-bgr {
-    background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 31px);
+    background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 32px);
     width: 180px;
     height: 248px;
-
+    position: relative;
+    z-index: 1;
     @include tablet {
-        background: repeating-linear-gradient(0deg, #e1e1e1 0 2px, #fafafa 2px 36px);
-        width: 550px;
+        background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 36px);
+        width: 520px;
         height: 108px;
-        padding-right: 25px;
+        // padding-right: 20px;
+        // padding-left: 20px;
     }
-
     @include desktop {
-        background: repeating-linear-gradient(0deg, #e1e1e1 0 2px, #fafafa 2px 38px);
+        background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 38px);
         width: 822px;
         height: 75px;
-        padding-right: 25px;
+        padding-right: 18px;
     }
 }
 
@@ -126,21 +130,22 @@
     // padding-top: 32px;
     padding-right: 15px;
     padding-left: 8px;
-
+    
     // background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 31px);
     @include tablet {
         font-weight: 500;
         font-size: 14px;
-        line-height: 216%;
+        line-height: 223%;
+        letter-spacing: 0.04em;
         padding-right: 50px;
-        padding-left: 55px;
+        padding-left: 50px;
         padding-top: 10px;
     }
-
     @include desktop {
         font-weight: 500;
         font-size: 16px;
         line-height: 186%;
+        letter-spacing: 0.04em;
     }
 }
 
@@ -151,12 +156,16 @@
     height: 40px;
     background-image: url("../images/svg/quote.svg");
     position: absolute;
-    top: 70px;
-    left: 36px;
-
+    top: -8%;
+    left: 0%;
+    z-index: -1;
     @include tablet {
-        top: 95px;
-        left: 50px;
+    top: -8%;
+    left: 3%;
+    }
+    @include desktop {
+    top: -10%;
+    left: 4%;
     }
 }
 
@@ -166,17 +175,20 @@
     line-height: 1.26;
     text-align: center;
     color: #000000;
-    padding-top: 46px;
-
+    padding-top: 30px;
+    // transform: translateX(-10%);
     @include tablet {
         font-weight: 500;
         font-size: 16px;
         line-height: 186%;
-        padding-right: 65px;
+        // padding-right: 65px;
+        // transform: translateX(50%);
     }
-
     @include desktop {
-        padding-right: 65px;
+        padding-top: 36px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 186%;
     }
 }
 
@@ -187,28 +199,23 @@
     height: 4px;
     background-image: url("../images/svg/red-dots.svg");
     position: absolute;
-    top: 393px;
-    left: 114px;
-
+    top: 89%;
+    left: 43%;
     @include tablet {
-        top: 250px;
-        left: 290px;
+        top: 78%;
+        left: 46%;
     }
-
     @include desktop {
-        top: 245px;
-        left: 434px;
+        top: 82%;
+        left: 45%;
     }
 }
 
 .slides__title {
-    padding-left: 25px;
     text-align: center;
-
     @include tablet {
         //  padding-right: ;
     }
-
     @include desktop {
         padding-right: 50px;
     }
@@ -246,7 +253,6 @@
     transition: background-image ease-in-out .5s;
 }
 
-.reviews label:hover,
 #slide1:checked~.controls label:nth-of-type(1),
 #slide2:checked~.controls label:nth-of-type(2),
 #slide3:checked~.controls label:nth-of-type(3) {
@@ -254,6 +260,10 @@
     background-image: url("../images/svg/house-checkbox.svg");
     top: -4px;
     left: -4px;
+}
+
+.reviews label:hover label::after{
+    background-image: url("../images/svg/ellipse_red.svg");
 }
 
 #slide1:checked~.controls label:nth-of-type(1)::after,
