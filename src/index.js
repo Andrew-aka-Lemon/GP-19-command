@@ -1,6 +1,3 @@
-
-
-
 // Maxim Bogdan - script for header mobile menu/////
 
 // Maxim Bogdan - script for header mobile menu and buy-now modal window/////
@@ -10,6 +7,7 @@
     openModalBtn: document.querySelector('.button-about-open'),
     closeModalBtn: document.querySelector('.js-close-button'),
     modal: document.querySelector('.about-menu'),
+    body: document.querySelector('body'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
