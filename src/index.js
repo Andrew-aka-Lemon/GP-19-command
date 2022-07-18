@@ -1,4 +1,4 @@
-/ Maxim Bogdan - script for header mobile menu and buy-now modal window/////
+//  Maxim Bogdan - script for header mobile menu and buy-now modal window
 (() => {
   const refs = {
     openMenuBtn: document.querySelector('.header-menu__button'),
@@ -45,7 +45,7 @@
     modalBtn.backdrop.classList.toggle('hidden');
     modalBtn.body.classList.toggle('no-scroll');
   }
-  
+
   function handleModalButton() {
     toggleModal();
     toggleMenu();
