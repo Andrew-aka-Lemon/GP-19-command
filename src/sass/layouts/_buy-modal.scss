@@ -7,11 +7,13 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms var(--timing-animation);
+    z-index: 998;
   }
   
   .backdrop.hidden {
     opacity: 0;
     pointer-events: none;
+
   }
   
   .modal-buynow {
@@ -32,7 +34,6 @@
     border-radius: 4px;
     padding: 40px;
     overflow-y: scroll;
-    // z-index: 0;
   
     .backdrop.hidden & {
       transform: translate(-50%, -50%) scale(1.2);
@@ -40,15 +41,10 @@
       visibility: hidden;
     }
   
-    // @include desktop {
-    // width: 528px;
-    //   min-height: 581px;
-    // }
-
     @media screen and (min-width: 720px) {
     max-height: 800px;
-  }
-
+    overflow: hidden;
+    }
 }
   
   .close-modal-button-buynow {
@@ -112,22 +108,59 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 3px solid transparent;
-    border-radius: 10%;
+    // border: 3px solid transparent;
+    // border-radius: 10%;
+    position: relative;
     color: var(--secondary-text-color);
     transition: 250ms fill var(--timing-animation);
 
-    &:hover, &:focus-within {
-    border: 3px solid var(--round-color);
-    }
-    .check:checked ~ & {
-    border: 3px solid var(--accent-color);
-    }
+    // &:focus-within
+    // &:hover {
+    // border: 3px solid var(--round-color);
+    // }
+    // .check:checked ~ & {
+    // border: 3px solid var(--accent-color);
+    // }
+
+    &:hover .checkborder {
+            // border: 3px solid var(--round-color);
+            // border-radius: 10%;
+            // display: block;
+            // width: 100px;
+            // height: 130px;
+            // position: absolute;
+            // top: -10;
+            // z-index: 999;
+            opacity: 1;
+        }
 
     @media screen and (max-width: 720px) {
         font-size: smaller;
     }
 }
+
+
+.checkborder {
+    border: 3px solid var(--round-color);
+    border-radius: 10%;
+    display: block;
+    width: 100px;
+    height: 130px;
+    position: absolute;
+    top: -5;
+    z-index: 999;
+    opacity: 0;
+}
+
+
+.check:checked+.checkborder {
+    opacity: 1;
+
+}
+
+// .checkborder:not(:last-child) {
+//     margin-right: 5px;
+// }
 
   .delivery {
     // margin: 30px 0;
@@ -385,10 +418,4 @@
     color: var(--secondary-text-color);
     display: block;
     margin-bottom: 4px;
-  }
-  
-  .modal-policy-link {
-    text-decoration-line: underline;
-    color: #2196f3;
-    margin-left: 4px;
   }
