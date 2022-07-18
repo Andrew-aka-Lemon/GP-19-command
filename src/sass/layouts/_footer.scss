@@ -1,11 +1,47 @@
 .footer {
   position: relative;
-
-  padding-top: 40px;
   background-color: var(--secondary-bg-color);
+
+  @include desktop {
+    padding-top: 40px;
+  }
+
+  @include desktop {
+    position: static;
+  }
+
+  &-alignment {
+    margin-bottom: 40px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 60px;
+    }
+  }
 
   &__left-side {
     width: 234px;
+
+    @include tablet {
+      width: 340px;
+    }
+
+    @include desktop {
+      width: 480px;
+    }
+  }
+
+  &__right-side {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      align-self: flex-end;
+      padding-right: 4px;
+    }
   }
 }
 
@@ -18,6 +54,21 @@
   color: #ffa5ba;
 
   margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: calc(30 / 26);
+    letter-spacing: 0.04em;
+
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    line-height: calc(34 / 30);
+
+    margin-bottom: 16px;
+  }
 }
 
 .general-title {
@@ -29,7 +80,20 @@
 
   color: var(--accent-color);
 
-  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: calc(55 / 48);
+    letter-spacing: 0.06em;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+  }
 }
 
 .social {
@@ -43,6 +107,15 @@
   }
   &__link {
     color: #fea5bb;
+
+    transition: color 250ms var(--timing-animation);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+
+      transition: color 250ms var(--timing-animation);
+    }
   }
   &__icon {
     height: 32px;
@@ -57,16 +130,40 @@
   line-height: 1.86;
   text-align: right;
 
-  margin-bottom: 56px;
+  @include tablet {
+    margin-bottom: 19px;
+
+    font-size: 14px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
 }
 
 .contacts-footer__mob-number {
   color: var(--accent-color);
 }
 
-.copyright {
-  // position: relative;
+.copy-thumb {
+  padding-top: 16px;
+  padding-bottom: 3px;
 
+  @include tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include desktop {
+    padding-top: 7px;
+    padding-bottom: 4px;
+  }
+}
+
+.copyright {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
@@ -74,21 +171,38 @@
 
   color: var(--secondary-text-color);
 
-  &--mb {
-    margin-bottom: 3px;
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    margin: 0 auto;
+  }
 
-    &::before {
-      content: '';
-      display: block;
+  @include desktop {
+    position: relative;
+  }
 
-      position: absolute;
-      bottom: 61px;
-      left: 0;
+  &::before {
+    content: '';
+    display: block;
 
-      width: 100vw;
-      // max-width: 320px;
-      height: 1px;
-      background-color: #e1e1e1;
+    position: absolute;
+    bottom: 61px;
+    left: 0;
+
+    width: 100vw;
+    height: 1px;
+    background-color: #e1e1e1;
+
+    @include tablet {
+      bottom: 42px;
+    }
+
+    @include desktop {
+      top: -7px;
+      width: 100%;
+    }
+
+    @include tablet {
+      // display: none;
     }
   }
 }
