@@ -1,5 +1,5 @@
 // Maxim Bogdan - script for header mobile menu and buy-now modal window/////
-main(() => {
+(() => {
   const refs = {
     openMenuBtn: document.querySelector('.header-menu__button'),
     closeMenuBtn: document.querySelector('.menu-close-btn'),
