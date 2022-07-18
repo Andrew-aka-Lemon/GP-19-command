@@ -1,4 +1,4 @@
-// Maxim Bogdan - script for header mobile menu and buy-now modal window/////
+//  Maxim Bogdan - script for header mobile menu and buy-now modal window
 (() => {
   const refs = {
     openMenuBtn: document.querySelector('.header-menu__button'),
@@ -8,15 +8,13 @@
     HeaderMenuOpen: document.querySelector('.header-menu__button'),
     HeaderModalBtn: document.querySelector('.modal-button-header'),
     mobMenuLink: document.querySelectorAll('.mob-menu__link'),
-   
   };
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
-  
 
   for (let index = 0; index < refs.mobMenuLink.length; index++) {
-    refs.mobMenuLink[index].addEventListener('click', toggleMenu); 
+    refs.mobMenuLink[index].addEventListener('click', toggleMenu);
   }
 
   function toggleMenu() {
@@ -28,11 +26,16 @@
 
   const modalBtn = {
     openModalBtn: document.querySelector('.modal-open'),
+    productsMobOpenModalBtn: document.querySelectorAll('.modal-product-mob'),
     mobOpenModalBtn: document.querySelector('.modal-open-mob'),
     closeModalBtn: document.querySelector('.close-modal-button-buynow'),
     backdrop: document.querySelector('.backdrop-buynow'),
     body: document.querySelector('body'),
   };
+
+  for (let index = 0; index < modalBtn.productsMobOpenModalBtn.length; index++) {
+     modalBtn.productsMobOpenModalBtn[index].addEventListener('click', toggleModal);
+  }
 
   modalBtn.openModalBtn.addEventListener('click', toggleModal);
   modalBtn.mobOpenModalBtn.addEventListener('click', handleModalButton);
@@ -48,7 +51,6 @@
     toggleMenu();
   }
 })();
-
 // Margo-js script for modal how its made
 (() => {
   const refs = {
