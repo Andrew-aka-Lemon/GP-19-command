@@ -1,4 +1,4 @@
-<section class="reviews">
+<section class="reviews container">
   <input type="radio" name="point" id="slide1" checked />
   <input type="radio" name="point" id="slide2" />
   <input type="radio" name="point" id="slide3" />
@@ -8,15 +8,15 @@
         <img
           class="slides__img"
           srcset="./images/customer-revievs-images/customer1.png x1,
-                  ./images/customer-revievs-images/customer1@2x.png "
+                  ./images/customer-revievs-images/customer1@2x.png x2"
           src="./images/customer-revievs-images/customer1.png"
           alt="Emily, Los Angeles"
-          width="85px"
-          height="85px"
+          width="85"
+          height="85"
         />
       </div>
       <div class="slides__bgr">
-        <div class="text-bdr">
+        <div class="text-bgr">
           <p class="slides__text">
             Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
             Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
@@ -33,11 +33,11 @@
         <img
           class="slides__img"
           srcset="./images/customer-revievs-images/customer2.png x1,
-             ./images/customer-revievs-images/customer2@2x.png "
+             ./images/customer-revievs-images/customer2@2x.png x2"
           src="./images/customer-revievs-images/customer2.png"
           alt="Emily, Los Angeles"
-          width="85px"
-          height="85px"
+          width="85"
+          height="85"
         />
       </div>
       <div class="slides__bgr">
@@ -56,19 +56,21 @@
         <img
           class="slides__img"
           srcset="./images/customer-revievs-images/customer3.png x1,
-             ./images/customer-revievs-images/customer3@2x.png "
+             ./images/customer-revievs-images/customer3@2x.png x2"
           src="./images/customer-revievs-images/customer3.png"
           alt="Emily, Los Angeles"
-          width="85px"
-          height="85px"
+          width="85p"
+          height="85p"
         />
       </div>
       <div class="slides__bgr">
-        <p class="slides__text">
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
+        <div class="text-bgr">
+          <p class="slides__text">
+            Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+            Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+            ipsum primis in nibh vel risus.
+          </p>
+        </div>
       </div>
       <div class="slides__title">
         <h3 class="slides__name">Emily, Los Angeles</h3>
@@ -81,3 +83,35 @@
     <label for="slide3"></label>
   </div>
 </section>
+
+<!-- ============================================================================== -->
+<!-- <section class="">
+  <div class="carousel-wrapper">
+    <input
+      type="radio"
+      checked="checked"
+      id="slide1"
+      class="carousel-selector"
+      name="carousel-selector"
+    />
+    <input
+      type="radio"
+      id="slide2"
+      class="carousel-selector"
+      name="carousel-selector"
+    />
+    <input
+      type="radio"
+      id="slide3"
+      class="carousel-selector"
+      name="carousel-selector"
+    />
+    <ul class="carousel-items">
+      <li class="carousel-item carousel-item-blue">Текст 1</li>
+
+      <li class="carousel-item carousel-item-red">Текст 2</li>
+
+      <li class="carousel-item carousel-item-green">Текст 3</li>
+    </ul>
+  </div>
+</section> -->
