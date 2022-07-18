@@ -1,349 +1,328 @@
-
-
 .about-product__name {
-    justify-content: center;
-    text-align: center;
-    color: var(--accent-color);
-    margin-bottom: 0px;
-    margin-top: 15px;
-    font-size: 34px;
-    font-weight: 400;
-    font-family: Titan One;
-    margin-bottom: 32px;
+  justify-content: center;
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 0px;
+  margin-top: 15px;
+  font-size: 34px;
+  font-weight: 400;
+  font-family: 'Titan One';
+  margin-bottom: 32px;
 
-    @include tablet {
-        font-size: 48px;
-        margin-top: 16px;
-        margin-bottom: 40px;
-
-    }
-    @include desktop {
-        font-size: 58px;
-        letter-spacing: 0.06em;
-        margin-bottom: 81px;
-    }
+  @include tablet {
+    font-size: 48px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 58px;
+    letter-spacing: 0.06em;
+    margin-bottom: 81px;
+  }
 }
 
 .about__product {
-    background-color: var(--secondary-bg-color)
-    padding-bottom: 40px;
-    background-image: url(../images/about-images/about-bgmilk-mob.png);
-        background-position: 20 595;
-        background-repeat: no-repeat;
-        padding-bottom: 20px;
-        background-size: contain;
-        max-width: 100%;
-        z-index: 1;
-    
-        @include retina {
-            background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
-        }
-    @include tablet {
-        padding-bottom: 60px;
-        background-image: none;
-    }
-    @include desktop{
+  background-color: var(--secondary-bg-color);
+  padding-bottom: 40px;
+  background-image: url(../images/about-images/about-bgmilk-mob.png);
+  background-position: 20 595;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  background-size: contain;
+  max-width: 100%;
+  z-index: 1;
 
-background-image: url(../images/about-images/about-bgmilk-desk.png);
-background-position: 0 236;
+  @include retina {
+    background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
+  }
+
+  @include tablet {
+    padding-bottom: 60px;
+    background-image: none;
+  }
+  @include desktop {
+    background-image: url(../images/about-images/about-bgmilk-desk.png);
+    background-position: 0 236;
     background-repeat: no-repeat;
     padding-bottom: 20px;
     background-size: contain;
     max-width: 100%;
     z-index: 1;
     @include retina {
-        background-image:url(../images/about-images/about-bgmilk-desk@2x.png);
+      background-image: url(../images/about-images/about-bgmilk-desk@2x.png);
     }
-    }
-
+  }
 }
 
-
 .about {
-    text-align: center;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-    color: var(--round-color);
-    font-size: 18px;
-    font-weight: 400;
-    font-family: Titan One;
+  text-align: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  color: var(--round-color);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Titan One';
 
-    @media screen and (min-width: 768px) {
-        font-size: 26px;
-    }
-    @include desktop {
-        font-size: 30px;
-    }
-
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
 }
 
 .about-picture {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 1;
-
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
 .product__picture {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 
-    @include tablet {
-        width: 336px;
-
-    }
-    @include desktop {
-        width: 501px;
-    }
+  @include tablet {
+    width: 336px;
+  }
+  @include desktop {
+    width: 501px;
+  }
 }
 
 .about-item {
-    font-family: DM Sans;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.58;
-    letter-spacing: 0.04em;
-    color: var(--main-text-color);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-right: 40px;
-@include tablet {
+  font-family: 'DM Sans';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-right: 40px;
+  @include tablet {
     font-size: 14px;
     line-height: 1.79;
     padding-right: 0px;
-}
-@include desktop {
+  }
+  @include desktop {
     margin-bottom: 0px;
     padding-bottom: 0px;
     font-size: 16px;
-}
+  }
 }
 
 .about--product {
-    color: var(--secondary-text-color);
-    font-family: DM Sans;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.58;
-    padding-top: 30px;
-    text-align: left;
-    justify-content: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 60px;
-    letter-spacing: 0.04em;
-    line-height: 162%;
-    @include tablet {
-        font-size: 14px;
-        margin-right: 0px;
-        padding-top: 24px;
-        line-height: 1.79;
-    }
-       @include desktop{
-
-       padding-top: 32px;
-       }
-   
+  color: var(--secondary-text-color);
+  font-family: 'DM Sans';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.58;
+  padding-top: 30px;
+  text-align: left;
+  justify-content: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 60px;
+  letter-spacing: 0.04em;
+  line-height: 162%;
+  @include tablet {
+    font-size: 14px;
+    margin-right: 0px;
+    padding-top: 24px;
+    line-height: 1.79;
+  }
+  @include desktop {
+    padding-top: 32px;
+  }
 }
 
 .about-text {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .about--milk {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    @include desktop{
-        padding-top: 90px;
-        display: block;
-    }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: 0px;
+  margin-right: 0px;
+  @include desktop {
+    padding-top: 90px;
+    display: block;
+  }
 }
 
 // .about__picture--milk {
-    // position: absolute;
-    // background-repeat: no-repeat;
-    // max-width: 100%;
-    // top: 80px;
-    // justify-content: center;
-    // text-align: center;
-    // @include tablet {
-        // display: none;
-    // }
-    // @include desktop {
-        // display: flex;
-        // position: fixed;
-            // z-index: 9;
-            // top: 0;
-            // left: 0;
-            // min-width: 100%;
-            // min-height: 100%;
-    // }
+// position: absolute;
+// background-repeat: no-repeat;
+// max-width: 100%;
+// top: 80px;
+// justify-content: center;
+// text-align: center;
+// @include tablet {
+// display: none;
+// }
+// @include desktop {
+// display: flex;
+// position: fixed;
+// z-index: 9;
+// top: 0;
+// left: 0;
+// min-width: 100%;
+// min-height: 100%;
+// }
 // }
 
 .production {
-    padding-top: 10px;
-    margin-top: 0px;
-    @include desktop {
-        padding-top: 32px;
-    }
+  padding-top: 10px;
+  margin-top: 0px;
+  @include desktop {
+    padding-top: 32px;
+  }
 }
 
 .button-about-open {
-    width: 176px;
-    height: 44px;
-    padding-left: 37px;
-    padding-right: 56px;
-    border-radius: 22px;
-    border: transparent;
-    background-color: var(--main-bg-color);
-    color: var(--accent-color);
-    margin-top: 20px;
-    font-family: DM Sans;
-    font-weight: 700;
-    font-size: 14px;
-    position: relative;
-    cursor: pointer;
-    transform: scale(1);
-    &:hover,
-    &:focus {
-        transform: scale(1.2);
-    }
-        @include tablet {
-            font-size: 16px;
-            margin-top: 40px;
-        }
-    @include desktop {
-        align-items: left;
-    }
+  width: 176px;
+  height: 44px;
+  padding-left: 37px;
+  padding-right: 56px;
+  border-radius: 22px;
+  border: transparent;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
+  margin-top: 20px;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  @include tablet {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+  @include desktop {
+    align-items: left;
+  }
 }
 
-
 .about__icon {
-    color: var(--accent-color);
-    margin: 0px;
-    padding: 0px;
-    width: 5px;
-    height: 8px;
-    margin-left: 10px;
-    position: absolute;
-    top: 50%;
-    right: 24%;
-    transform: translateY(-50%);
-
+  color: var(--accent-color);
+  margin: 0px;
+  padding: 0px;
+  width: 5px;
+  height: 8px;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  right: 24%;
+  transform: translateY(-50%);
 }
 
 .about-menu {
-    @media screen and (max-width: 767px) {
-        padding-top: 8px;
-        padding-right: 15px;
-        // padding-bottom: 40px;
-        padding-left: 15px;
-        background-color: var(--round-color);
-        color: var(--secondary-bg-color);
-        text-align: justify;
-        font-size: 14px;
-        // display: none;
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100vh;
-        z-index: 1;
-        overflow-y: auto;
+  @media screen and (max-width: 767px) {
+    padding-top: 8px;
+    padding-right: 15px;
+    // padding-bottom: 40px;
+    padding-left: 15px;
+    background-color: var(--round-color);
+    color: var(--secondary-bg-color);
+    text-align: justify;
+    font-size: 14px;
+    // display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: auto;
 
-       
-
-        .container-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding: 0px;
-           max-width: 300px;
-           margin-left: auto;
-           margin-right: auto;
-        }
-
+    .container-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    @include tablet {
-        display: flex;
+  }
+  @include tablet {
+    display: flex;
+  }
 
-    }
-
-    @include desktop {
-         gap: 99px;
-        margin-left: 0px;
-        margin-right: 0px;
-        // background-image: url(../images/about-images/about-bgmilk-desk.png);
-        background-size: 100%;
-        padding-right: 105px;
-    }
+  @include desktop {
+    gap: 99px;
+    margin-left: 0px;
+    margin-right: 0px;
+    // background-image: url(../images/about-images/about-bgmilk-desk.png);
+    background-size: 100%;
+    padding-right: 105px;
+  }
 }
 
-.container__about{
-    position: relative;
+.container__about {
+  position: relative;
 }
 
 .about-modul__picture {
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
 }
-
-
 
 .about-menu.is-hidden .container__about {
-    transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
-.modal__text{
-    font-size: 26px;
-    font-weight: 700;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
+.modal__text {
+  font-size: 26px;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .modal-about__text {
-    font-size: 14px;
-    text-align: justify;
-    padding-top: 10px;
+  font-size: 14px;
+  text-align: justify;
+  padding-top: 10px;
 }
 
 .about-video-wrapper {
-    justify-content: center;
-    margin-left: 0px;
-    align-items: center;
-    margin-top: 10px;
-   
+  justify-content: center;
+  margin-left: 0px;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .js-close-button {
-    display: flex;
-        align-items: center;
-        justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--background-color);
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.js-icon--about{
-    
-    fill: currentColor;}
+.js-icon--about {
+  fill: currentColor;
+}
