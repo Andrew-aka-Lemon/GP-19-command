@@ -1,3 +1,5 @@
+
+
 .about-product__name {
     justify-content: center;
     text-align: center;
@@ -9,16 +11,49 @@
     font-family: Titan One;
     margin-bottom: 32px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         font-size: 48px;
         margin-top: 16px;
         margin-bottom: 40px;
+    }
+    @include desktop {
+        font-size: 58px;
+        letter-spacing: 0.06em;
+        margin-bottom: 81px;
     }
 }
 
 .about__product {
     background-color: #FFF5F6;
+    padding-bottom: 40px;
+    background-image: url(../images/about-images/about-bgmilk-mob.png);
+        background-position: 20 595;
+        background-repeat: no-repeat;
+        padding-bottom: 20px;
+        background-size: contain;
+        max-width: 100%;
+        z-index: 1;
     
+        @include retina {
+            background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
+        }
+    @include tablet {
+        padding-bottom: 60px;
+        background-image: none;
+    }
+    @include desktop{
+
+background-image: url(../images/about-images/about-bgmilk-desk.png);
+background-position: 0 236;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    background-size: contain;
+    max-width: 100%;
+    z-index: 1;
+    @include retina {
+        background-image:url(../images/about-images/about-bgmilk-desk@2x.png);
+    }
+    }
 }
 
 .about {
@@ -34,6 +69,9 @@
     @media screen and (min-width: 768px) {
         font-size: 26px;
     }
+    @include desktop {
+        font-size: 30px;
+    }
 
 }
 
@@ -43,16 +81,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    z-index: 1;
 
 }
 
 .product__picture {
     margin-bottom: 40px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 336px;
 
+    }
+    @include desktop {
+        width: 501px;
     }
 }
 
@@ -61,14 +102,21 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 1.58;
+    letter-spacing: 0.04em;
     color: var(--main-text-color);
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-bottom: 0px;
     padding-right: 40px;
 @include tablet {
     font-size: 14px;
     line-height: 1.79;
     padding-right: 0px;
+}
+@include desktop {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 16px;
 }
 }
 
@@ -84,6 +132,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 60px;
+    letter-spacing: 0.04em;
     line-height: 162%;
     @include tablet {
         font-size: 14px;
@@ -91,6 +140,18 @@
         padding-top: 24px;
         line-height: 1.79;
     }
+       @include desktop{
+
+       padding-top: 32px;
+       }
+   
+}
+
+.about-text {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .about--milk {
@@ -100,27 +161,43 @@
     position: relative;
     margin-left: 0px;
     margin-right: 0px;
-    
-}
-
-.about__picture--milk {
-    position: absolute;
-    background-repeat: no-repeat;
-    max-width: 100%;
-    top: 80px;
-    justify-content: center;
-    text-align: center;
-    @include tablet {
-        display: none;
+    @include desktop{
+        padding-top: 90px;
+        display: block;
     }
 }
+
+// .about__picture--milk {
+    // position: absolute;
+    // background-repeat: no-repeat;
+    // max-width: 100%;
+    // top: 80px;
+    // justify-content: center;
+    // text-align: center;
+    // @include tablet {
+        // display: none;
+    // }
+    // @include desktop {
+        // display: flex;
+        // position: fixed;
+            // z-index: 9;
+            // top: 0;
+            // left: 0;
+            // min-width: 100%;
+            // min-height: 100%;
+    // }
+// }
 
 .production {
     padding-top: 10px;
     margin-top: 0px;
+    @include desktop {
+        padding-top: 32px;
+    }
 }
 
-.button-about {
+.button-about-open {
+    
     width: 176px;
     height: 44px;
     padding-left: 37px;
@@ -134,14 +211,20 @@
     font-weight: 700;
     font-size: 14px;
     position: relative;
-    
+    cursor: pointer;
+    transform: scale(1);
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
         @include tablet {
             font-size: 16px;
             margin-top: 40px;
         }
-    
+    @include desktop {
+        align-items: left;
+    }
 }
-
 
 
 .about__icon {
@@ -164,5 +247,13 @@
         margin-left: 16px;
         margin-right: 18px;
         gap: 32px;
+    }
+    @include desktop {
+        gap: 99px;
+        margin-left: 0px;
+        margin-right: 0px;
+        // background-image: url(../images/about-images/about-bgmilk-desk.png);
+        background-size: 100%;
+        padding-right: 105px;
     }
 }
