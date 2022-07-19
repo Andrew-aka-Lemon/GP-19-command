@@ -180,32 +180,32 @@
 }
 
 
-.icon-conatiner {
-    // position: relative;
-    margin-left: 12px;
-    background-image: url("../images/svg/continiue.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 4px;
-    height: 8px;
-    transform: translateY(2px);
+// .icon-conatiner {
+//     // position: relative;
+//     margin-left: 12px;
+//     background-image: url("../images/svg/continiue.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     width: 4px;
+//     height: 8px;
+//     transform: translateY(2px);
 
    
-}
+// }
 
-.mob-icon-conatiner {
-    margin-left: 16px;
-        background-image: url("../images/svg/continiue.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 5.5px;
-        height: 8px;
-        transform: translateY(1.5px);
-        @include tablet{
-            margin-right: 14px;
-            width: 4.5px;
-        }
-}
+// .mob-icon-conatiner {
+//     margin-left: 16px;
+//         background-image: url("../images/svg/continiue.svg");
+//         background-size: contain;
+//         background-repeat: no-repeat;
+//         width: 5.5px;
+//         height: 8px;
+//         transform: translateY(1.5px);
+//         @include tablet{
+//             margin-right: 14px;
+//             width: 4.5px;
+//         }
+// }
 
 .hide-mob {
 
