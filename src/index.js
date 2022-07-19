@@ -33,8 +33,15 @@
     body: document.querySelector('body'),
   };
 
-  for (let index = 0; index < modalBtn.productsMobOpenModalBtn.length; index++) {
-     modalBtn.productsMobOpenModalBtn[index].addEventListener('click', toggleModal);
+  for (
+    let index = 0;
+    index < modalBtn.productsMobOpenModalBtn.length;
+    index++
+  ) {
+    modalBtn.productsMobOpenModalBtn[index].addEventListener(
+      'click',
+      toggleModal
+    );
   }
 
   modalBtn.openModalBtn.addEventListener('click', toggleModal);
@@ -120,5 +127,22 @@
   function toggleModal() {
     refs.backdrop.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
+  }
+})();
+
+///////////////////Lemon - скрипт для Hero mini-modal//////////////////////
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('.milk-bucket__button'),
+    closeModalBtn: document.querySelector('.close-modal-eco-milk'),
+    backdrop: document.querySelector('.modal-eco-milk'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.backdrop.classList.toggle('is-hidden');
   }
 })();
