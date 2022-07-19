@@ -59,7 +59,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8e9ed;
+    // background-color: #f8e9ed;
+        background-color: var(--accent-color);
     transition: 250ms transform var(--timing-animation);
   
     &:hover, &:focus {
