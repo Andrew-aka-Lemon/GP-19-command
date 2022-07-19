@@ -494,6 +494,8 @@
         right: 8px;
       }
 
+      transition: transform 250ms var(--timing-animation);
+
       cursor: pointer;
 
       width: 30px;
@@ -506,7 +508,8 @@
 
       transition: transform 250ms var(--timing-animation);
 
-      &:hover {
+      &:hover,
+      &:focus {
         transform: rotate(180deg);
 
         transition: transform 250ms var(--timing-animation);
@@ -564,6 +567,12 @@
     @include desktop {
       width: 26px;
       height: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(104%);
+      transition: transform 250ms var(--timing-animation);
     }
 
     border-radius: 50%;
