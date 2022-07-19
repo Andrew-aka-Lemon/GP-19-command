@@ -273,6 +273,30 @@
     top: 152px;
     right: 34px;
   }
+
+  &::after {
+    content: '';
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    position: absolute;
+    top: -2px;
+    right: -10px;
+
+    z-index: -1;
+
+    @include desktop {
+      width: 30px;
+      height: 30px;
+
+      top: -4px;
+      right: -18px;
+    }
+  }
 }
 
 .hero-title__container {
@@ -284,11 +308,35 @@
 
     position: absolute;
     top: 151px;
-    right: 36px;
+    right: 40px;
   }
   @include desktop {
     top: 244px;
-    right: 18px;
+    right: 34px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    right: -8px;
+
+    z-index: -1;
+
+    @include desktop {
+      width: 30px;
+      height: 30px;
+
+      top: -3px;
+      right: -18px;
+    }
   }
 }
 
@@ -301,58 +349,11 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
+  text-align: right;
 
   @include desktop {
     font-size: 46px;
     line-height: calc(53 / 46);
-  }
-}
-
-.hero-title__content::after {
-  content: '';
-  display: block;
-
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #fff;
-
-  position: absolute;
-  top: -2px;
-  right: -10px;
-
-  z-index: -1;
-
-  @include desktop {
-    width: 30px;
-    height: 30px;
-
-    top: -4px;
-    right: -18px;
-  }
-}
-
-.hero-title__container::after {
-  content: '';
-  display: block;
-
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #fff;
-
-  position: absolute;
-  top: 0;
-  right: -8px;
-
-  z-index: -1;
-
-  @include desktop {
-    width: 30px;
-    height: 30px;
-
-    top: -3px;
-    right: 0;
   }
 }
 
