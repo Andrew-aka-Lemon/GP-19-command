@@ -76,12 +76,12 @@
     color: #d41443;
 
     @include tablet {
-      font-size: 22px;
-      line-height: calc(25 / 22);
+      font-size: 34px;
+      line-height: 0.905;
     }
+
     @include desktop {
       font-size: 58px;
-      line-height: 0.905;
     }
   }
 }
