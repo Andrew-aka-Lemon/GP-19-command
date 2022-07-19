@@ -80,7 +80,7 @@
     background-color: #FAFAFA;
     text-align: center;
     padding-left: 45px;
-    padding-top: 43px;
+    padding-top: 45px;
     padding-bottom: 42px;
     
     @include tablet {
@@ -88,13 +88,13 @@
         height: 164px;
         padding-top: 20px;
         padding-bottom: 36px;
-        padding-left: 6px;
+        padding-left: 32px;
         
     }
     @include desktop {
         width: 968px;
         height: 138px;
-        padding-top: 32px;
+        padding-top: 20px;
         padding-bottom: 36px;
         padding-left: 70px;
     }
@@ -108,7 +108,7 @@
     z-index: 1;
     @include tablet {
         background: repeating-linear-gradient(0deg, #E1E1E1 0px, #E1E1E1 2px, #FAFAFA 2px, #FAFAFA 36px);
-        width: 570px;
+        width: 520px;
         height: 108px;
         // padding-right: 20px;
         // padding-left: 20px;
@@ -173,7 +173,7 @@
     line-height: 1.26;
     text-align: center;
     color: #000000;
-    padding-top: 36px;
+    padding-top: 30px;
     // transform: translateX(-10%);
     @include tablet {
         font-weight: 500;
