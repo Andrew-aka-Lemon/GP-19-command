@@ -404,10 +404,10 @@
     font-weight: 700;
     line-height: 130%;
 
-    padding: 20px 25px;
+    padding: 20px 30px;
     // padding-right: 50px;
 
-    width: 340px;
+    width: 350px;
     height: 160px;
 
     @include desktop {
@@ -461,11 +461,10 @@
 
     &-text {
       color: var(--accent-color);
-      text-align: right;
+      text-align: left;
 
       @include desktop {
         padding-right: 55px;
-        text-align: left;
       }
 
       &-upper {
