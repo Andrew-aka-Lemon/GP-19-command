@@ -130,19 +130,24 @@
   }
 })();
 
-///////////////////Lemon - скрипт для Hero mini-modal//////////////////////
+///////////////////////Lemon - new cool скрипт для Hero mini-modal
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('.milk-bucket__button'),
-    closeModalBtn: document.querySelector('.close-modal-eco-milk'),
-    backdrop: document.querySelector('.modal-eco-milk'),
-  };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.backdrop.classList.toggle('is-hidden');
+let openModal = document.querySelector('.milk-bucket__button');
+let bodyModal = document.querySelector('.modal-eco-milk');
+const toggleMenu = () => {
+  bodyModal.classList.toggle('is-hidden');
+  bodyModal.classList.toggle('not-hidden');
+};
+openModal.addEventListener('click', e => {
+  e.stopPropagation();
+  toggleMenu();
+});
+document.addEventListener('click', e => {
+  let target = e.target;
+  let its_bodyModal = target == bodyModal || bodyModal.contains(target);
+  let its_openModal = target == openModal;
+  let bodyModal_is_active = bodyModal.classList.contains('not-hidden');
+  if (!its_bodyModal && !its_openModal && bodyModal_is_active) {
+    toggleMenu();
   }
 })();
