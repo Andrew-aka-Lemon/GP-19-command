@@ -152,7 +152,7 @@
       <li class="contacts__button__item">
         <button class="contacts__button" type="button">
           Our Locations
-          <div class="contacts__arrow-right"></div>
+          <span class="contacts__arrow-right"></span>
         </button>
       </li>
       <li class="contacts__button__item">
@@ -161,13 +161,15 @@
           type="button"
         >
           Franchise
-          <div class="contacts__arrow-right contacts__arrow-right--color"></div>
+          <span
+            class="contacts__arrow-right contacts__arrow-right--color"
+          ></span>
         </button>
       </li>
     </ul>
   </div>
 
-  <!-- ------------------------Backdrop----------------------------------------- -->
+  <!--------------------------Backdrop------------------------------------------->
 
   <div class="backdrop-contacts-loc is-hidden">
     <div class="contacts-modal-loc">
@@ -176,19 +178,19 @@
           class="contacts-modal-loc__close-icon"
           src="./images/svg/close-menu.svg"
           alt="close"
-          height="14"
-          width="14"
+          height="16"
+          width="16"
         />
       </button>
-      <p class="modal-loc__title">Icecream</p>
+      <p class="modal-loc__title">We are here</p>
       <form>
         <div class="modal-loc__map">
           <iframe
+            class="contacts-loc__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48370.26613765322!2d-74.05687944179685!3d40.7369089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259c3202e4ca5%3A0xcda02870d8b15706!2sCaff%C3%A8%20Panna!5e0!3m2!1sen!2sua!4v1658100357010!5m2!1sen!2sua"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            class="contacts-loc__map"
           ></iframe>
         </div>
       </form>
@@ -196,22 +198,25 @@
   </div>
   <div class="backdrop-contacts-fr is-hidden">
     <div class="contacts-modal-fr">
-      <button type="button" class="contacts-modal-close-fr__button">
-        <img
-          class="contacts-modal-fr__close-icon"
-          src="./images/svg/close-menu.svg"
-          alt="close"
-          height="14"
-          width="14"
-        />
-      </button>
-      <p class="modal-fr__title">
-        Interested in an Ice Cream Factory Franchise?
-      </p>
+      <div class="contacts-modal__top-container">
+        <p class="modal-fr__title">
+          Interested in an Ice Cream <br />
+          Factory Franchise?
+        </p>
+        <button type="button" class="contacts-modal-close-fr__button">
+          <img
+            class="contacts-modal-fr__close-icon"
+            src="./images/svg/close-menu.svg"
+            alt="close"
+            height="16"
+            width="16"
+          />
+        </button>
+      </div>
       <form>
         <div class="cantacts-form__name">
           <div class="contacts-form">
-            <label class="contacts-modal__label" for="contacts-modal-name"
+            <label class="contacts-modal__label" for="contacts-modal-first-name"
               >First Name</label
             >
             <div class="contacts-form__wrap">
@@ -219,7 +224,7 @@
                 type="text"
                 class="contacts-form__input"
                 name="Firstname"
-                id="contacts-modal-name"
+                id="contacts-modal-first-name"
                 placeholder=""
                 required
               />
@@ -227,7 +232,7 @@
           </div>
 
           <div class="contacts-form">
-            <label class="contacts-modal__label" for="contacts-modal-name"
+            <label class="contacts-modal__label" for="contacts-modal-last-name"
               >Last Name</label
             >
             <div class="contacts-form__wrap">
@@ -235,7 +240,7 @@
                 type="text"
                 class="contacts-form__input"
                 name="Lastname"
-                id="contacts-modal-name"
+                id="contacts-modal-last-name"
                 placeholder=""
                 required
               />
