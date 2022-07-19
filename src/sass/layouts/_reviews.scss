@@ -80,7 +80,7 @@
     background-color: #FAFAFA;
     text-align: center;
     padding-left: 45px;
-    padding-top: 25px;
+    padding-top: 45px;
     padding-bottom: 42px;
     
     @include tablet {
@@ -197,10 +197,10 @@
     height: 4px;
     background-image: url("../images/svg/red-dots.svg");
     position: absolute;
-    top: 89%;
+    top: 92%;
     left: 43%;
     @include tablet {
-        top: 78%;
+        top: 82%;
         left: 46%;
     }
     @include desktop {
