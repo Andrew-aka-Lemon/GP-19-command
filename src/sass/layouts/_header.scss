@@ -1,6 +1,6 @@
 .header {
     position: absolute;
-    top: 8px;
+    margin-top: 8px;
     left: 0;
     width: 100%;
     font-weight: 700;
@@ -70,6 +70,7 @@
     width: 20px;
     height: 12px;
     margin-left: auto;
+    cursor: pointer;
 
     transition: all var(--timing-animation) 1000ms;
 
@@ -101,6 +102,8 @@
 
     color: var(--accent-color);
     background-color: var(--main-bg-color);
+
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -272,6 +275,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 
