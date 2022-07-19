@@ -130,23 +130,7 @@
   }
 })();
 
-///////////////////Lemon - скрипт для Hero mini-modal//////////////////////
-
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector('.milk-bucket__button'),
-//     closeModalBtn: document.querySelector('.close-modal-eco-milk'),
-//     backdrop: document.querySelector('.modal-eco-milk'),
-//   };
-
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     refs.backdrop.classList.toggle('is-hidden');
-//   }
-// })();
-///////////////////////
+///////////////////////Lemon - new cool скрипт для Hero mini-modal
 
 let openModal = document.querySelector('.milk-bucket__button');
 let bodyModal = document.querySelector('.modal-eco-milk');
