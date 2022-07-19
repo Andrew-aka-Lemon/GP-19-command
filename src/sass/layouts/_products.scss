@@ -363,10 +363,14 @@ margin-left: 41px;
     color: var(--accent-color);
     fill: currentColor;
 
+    transform: scale(100%);
+    transition: transform 250ms var(--timing-animation),
+    background-color 250ms var(--timing-animation);
+
     &:hover,
     &:focus {
-        
-        transform: scale(1.20);
+    transform: scale(104%);
+    transition: transform 250ms var(--timing-animation);
     }
 }
 
@@ -381,12 +385,8 @@ margin-left: 41px;
     
     background: rgba(0, 0, 0, 0);
     opacity: 1;
-    
-    transform:  opacity var(--timing-duration) var(--timing-function), 
-    visibility var(--timing-duration) var(--timing-function);  
-
-   overflow-y: scroll;
- //  z-index: 1;
+    overflow-y: scroll;
+    z-index: 2;
 }
 
 .backdrop__products.is-hidden {
@@ -416,6 +416,8 @@ margin-left: 41px;
         opacity: 0;
     }
 
+
+    
     @include mobile {
         min-width: 320px;
         min-height: 320px; 
@@ -468,6 +470,7 @@ margin-left: 41px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    
 }
 
 .modal-prd__close {
