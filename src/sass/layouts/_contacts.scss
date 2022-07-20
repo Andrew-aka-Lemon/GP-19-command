@@ -7,6 +7,18 @@
     #fff5f6 100%
   );
 
+  &.section {
+    padding-bottom: 40px;
+
+    @include tablet {
+      padding-bottom: 0px;
+    }
+
+    @include desktop {
+      padding-bottom: 60px;
+    }
+  }
+
   @include tablet {
     background: linear-gradient(
       to bottom,
