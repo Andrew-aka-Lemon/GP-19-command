@@ -1,8 +1,8 @@
 (() => {
     const refs = {
-      openModalBtn: document.querySelector("[products2-modal-open]"),
-      closeModalBtn: document.querySelector("[products2-modal-close]"),
-      modal: document.querySelector("[data-modal-products2]"),
+      openModalBtn: document.querySelector('.btn__products-ic'),
+      closeModalBtn: document.querySelector('.btn__products-ic-close'),
+      modal: document.querySelector('.modal__products-ic'),
       body: document.querySelector('body')
     };
   

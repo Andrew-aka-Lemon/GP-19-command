@@ -1,113 +1,139 @@
-<section id="products"  class="section container">
+<section class="section" id="products">
+  <div class="container">
     <p class="title__above-products">100% natural</p>
     <h2 class="title-h__products">products</h2>
-     <ul class="list__products ">
-        <li class="item__products ">
-            <article class="card__products">
-                
-                <h3 class="title__products">ice cream</h3>
-            
-                <p class="text__products">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <button products1-modal-open type="button" class="btn__products"> 
-                <svg class="btn-products__icon" width="15" height="15">
-                    <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
-                    </svg>
-            </button>
-            </article>
-        </li>
-        <li class="item__products ">
-            <article class="card__products">
-            
-                <h3 class="title__products">ice coffee</h3>
- 
-                <p class="text__products">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <button products2-modal-open class="btn__products">
-                <svg class="btn-products__icon" width="15" height="15">
-                   <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
-                    </svg>
-            </button>
-            </article>
-        </li>
-        <li class="item__products ">
-            <article class="card__products">
-            
-                <h3 class="title__products">milkshakes</h3>
+    <ul class="list__products">
+      <li class="item__products">
+        <article class="card__products">
+          <h3 class="title__products">ice cream</h3>
 
-                <p class="text__products">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <button products3-modal-open class="btn__products">
-                 <svg class="btn-products__icon" width="15" height="15">
-                    <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
-                    </svg> 
-            </button>
-            </article>
-        </li>
-        </ul>
-       
-</section> 
+          <p class="text__products">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <button type="button" class="btn__products btn__products-ic">
+            <svg class="btn-products__icon" width="15" height="15">
+              <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
+            </svg>
+          </button>
+        </article>
+      </li>
+      <li class="item__products">
+        <article class="card__products">
+          <h3 class="title__products">ice coffee</h3>
 
+          <p class="text__products">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <button class="btn__products btn__products-icf">
+            <svg class="btn-products__icon" width="15" height="15">
+              <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
+            </svg>
+          </button>
+        </article>
+      </li>
+      <li class="item__products">
+        <article class="card__products">
+          <h3 class="title__products">milkshakes</h3>
 
+          <p class="text__products">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <button class="btn__products btn__products-mlk">
+            <svg class="btn-products__icon" width="15" height="15">
+              <use href="./images/svg/arrow-right.svg#icon-arrow-right2"></use>
+            </svg>
+          </button>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
 
 <!--Modal-->
 
- <div class="backdrop__products is-hidden" data-modal-products1>
-    <div class="modal__products ice-cream">
-<button type="button" class="modal-prd-bnt_close" products1-modal-close>
-            <!-- <svg class="modal-prd__close modal-prd__img" width="18" height="18">
+<div class="backdrop__products is-hidden modal__products-ic">
+  <div class="modal__products ice-cream">
+    <button type="button" class="modal-prd-bnt_close btn__products-ic-close">
+      <!-- <svg class="modal-prd__close modal-prd__img" width="18" height="18">
             <use href="./images/svg/close-menu.svg#icon-close-black-18dp-2-1-2-1"></use>
         </svg> -->
-<img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x">
-</button>
+      <img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x" />
+    </button>
 
-<p class="products-modal__title ice-cream-modal">ice-cream</p>
+    <p class="products-modal__title ice-cream-modal">ice-cream</p>
 
-<iframe class="video" width="200" height="200" src="https://www.youtube.com/embed/rHVW_VqX33A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+    <iframe
+      class="video"
+      width="200"
+      height="200"
+      src="https://www.youtube.com/embed/rHVW_VqX33A"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
 
     <button class="modal-open-mob modal-product-mob" type="button">
       Buy now
-      <div class="mob-icon-conatiner"></div>
+    </button>
+  </div>
+</div>
+<div class="backdrop__products is-hidden modal__products-icf">
+  <div class="modal__products ice-coffee">
+    <button type="button" class="modal-prd-bnt_close btn__products-icf-close">
+      <!-- <svg class="modal-prd__close modal-prd__imgg" width="18" height="18">
+            <use href="./images/svg/close-menu.svg#icon-close-black-18dp-2-1-2-1"></use>
+        </svg> -->
+      <img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x" />
     </button>
 
-</div>  
-</div> 
-<div class="backdrop__products is-hidden" data-modal-products2>
-    <div class="modal__products ice-coffee">
-<button type="button" class="modal-prd-bnt_close" products2-modal-close>
-            <!-- <svg class="modal-prd__close modal-prd__imgg" width="18" height="18">
-            <use href="./images/svg/close-menu.svg#icon-close-black-18dp-2-1-2-1"></use>
-        </svg> -->
-        <img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x">
-</button>
+    <p class="products-modal__title ice-cream-modal">ice coffee</p>
 
-<p class="products-modal__title ice-cream-modal">ice coffee</p>
-
-<iframe class="video" width="200" height="200" src="https://www.youtube.com/embed/96r2BFCmsXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
-<button class="modal-open-mob modal-product-mob" type="button">
-    Buy now
-    <div class="mob-icon-conatiner"></div>
-  </button>
-
-</div>
+    <iframe
+      class="video"
+      width="200"
+      height="200"
+      src="https://www.youtube.com/embed/96r2BFCmsXc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <button class="modal-open-mob modal-product-mob" type="button">
+      Buy now
+    </button>
+  </div>
 </div>
 
-<div class="backdrop__products is-hidden" data-modal-products3>
-    <div class="modal__products milkshakes">
-<button type="button" class="modal-prd-bnt_close" products3-modal-close>
-            <!-- <svg class="modal-prd__close modal-prd__img" width="18" height="18">
+<div class="backdrop__products is-hidden modal__products-mlk">
+  <div class="modal__products milkshakes">
+    <button type="button" class="modal-prd-bnt_close btn__products-mlk-close">
+      <!-- <svg class="modal-prd__close modal-prd__img" width="18" height="18">
             <use href="./images/svg/close-menu.svg#icon-close-black-18dp-2-1-2-1"></use>
         </svg> -->
-        <img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x">
-</button>
+      <img class="link-icon-close" src="./images/svg/close-menu.svg" alt="x" />
+    </button>
 
-<p class="products-modal__title">milkshakes</p>
+    <p class="products-modal__title">milkshakes</p>
 
-<iframe class="video" width="200" height="200" src="https://www.youtube.com/embed/6i5vimMVM40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<button class="modal-open-mob modal-product-mob" type="button">
-    Buy now
-    <div class="mob-icon-conatiner"></div>
-  </button>
-
-</div> 
-</div> 
-<script src="./modal_products1.js"></script>
-<script src="./modal_products2.js"></script>
-<script src="./modal_products3.js"></script>
+    <iframe
+      class="video"
+      width="200"
+      height="200"
+      src="https://www.youtube.com/embed/6i5vimMVM40"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <button class="modal-open-mob modal-product-mob" type="button">
+      Buy now
+    </button>
+  </div>
+</div>
+<script src="./modal_products_ic.js"></script>
+<script src="./modal_products_icf.js"></script>
+<script src="./modal_products_mlk.js"></script>
