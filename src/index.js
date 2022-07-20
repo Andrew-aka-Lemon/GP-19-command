@@ -72,7 +72,7 @@
 
   function toggleModal() {
     document.body.classList.toggle('modal-open');
-    refs.modal.classList.toggle('hidden');
+    refs.modal.classList.toggle('its-hidden');
     refs.body.classList.toggle('prevent-scroll');
   }
 })();
