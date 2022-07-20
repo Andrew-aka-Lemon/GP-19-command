@@ -7,6 +7,18 @@
     #fff5f6 100%
   );
 
+  &.section {
+    padding-bottom: 40px;
+
+    @include tablet {
+      padding-bottom: 0px;
+    }
+
+    @include desktop {
+      padding-bottom: 60px;
+    }
+  }
+
   @include tablet {
     background: linear-gradient(
       to bottom,
@@ -270,13 +282,17 @@
   border-radius: 22px;
   border-color: transparent;
 
-  transition-property: background-color;
+  transition-property: background-color, transform;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-animation);
 
   &:hover,
   &:focus {
     transform: scale(104%);
+
+    transition-property: background-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-animation);
   }
 
   @include tablet {
@@ -300,6 +316,10 @@
   &:focus {
     background-color: #ecebeb;
     color: var(--accent-color);
+
+    transition-property: background-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-animation);
   }
 }
 
