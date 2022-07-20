@@ -345,12 +345,14 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
 justify-content: center;
   margin-left: 0px;
   align-items: center;
+  text-align: center;
   margin-top: 10px;
   border-radius: 24px;
   @include tablet{
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-left: 40px;
   }
 }
 
