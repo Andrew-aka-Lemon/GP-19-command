@@ -1,0 +1,2 @@
+!function(){var e={openModalBtn:document.querySelector(".btn__products-mlk"),closeModalBtn:document.querySelector(".btn__products-mlk-close"),modal:document.querySelector(".modal__products-mlk"),body:document.querySelector("body")};function o(){e.modal.classList.toggle("is-hidden"),e.body.classList.toggle("prevent-scroll")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)}();
+//# sourceMappingURL=index.cc5284cd.js.map
