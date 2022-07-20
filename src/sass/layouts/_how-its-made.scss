@@ -21,26 +21,26 @@
   }
 }
 
-.container-about{
-background-size: contain;
+.container-about {
+  background-size: contain;
   max-width: 100%;
   z-index: 1;
   background-image: url(../images/about-images/about-bgmilk-mob.png);
   background-position: 10 530;
   background-repeat: no-repeat;
-@include retina {
+  @include retina {
     background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
   }
-  @include tablet{
-background-image: none;
+  @include tablet {
+    background-image: none;
   }
   @include desktop {
-background-image: url(../images/about-images/about-bgmilk-desk.png);
-  background-position: 0 236;
-  background-repeat: no-repeat;
-  max-width: 100%;
+    background-image: url(../images/about-images/about-bgmilk-desk.png);
+    background-position: 0 236;
+    background-repeat: no-repeat;
+    max-width: 100%;
     z-index: 1;
-  
+
     @include retina {
       background-image: url(../images/about-images/about-bgmilk-desk@2x.png);
     }
@@ -50,20 +50,13 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
 .about__product {
   background-color: var(--secondary-bg-color);
   padding-bottom: 40px;
-  
-
-
- 
 
   @include tablet {
     padding-bottom: 60px;
-    
   }
   @include desktop {
-   
     padding-bottom: 20px;
     background-size: contain;
-    
   }
 }
 
@@ -172,7 +165,6 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
   }
 }
 
-
 .production {
   padding-top: 10px;
   margin-top: 0px;
@@ -197,10 +189,19 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
   position: relative;
   cursor: pointer;
   transform: scale(1);
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-animation);
+
   &:hover,
   &:focus {
     transform: scale(1.04);
-    background-color: #ECEBEB;
+    background-color: #ecebeb;
+
+    transition-property: background-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-animation);
   }
   @include tablet {
     font-size: 16px;
@@ -225,79 +226,76 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
 }
 
 .about-menu {
-    
-    background-color: var(--background-color);
-    color: var(--light-text-color);
-    text-align: justify;
-    font-size: 14px;
+  background-color: var(--background-color);
+  color: var(--light-text-color);
+  text-align: justify;
+  font-size: 14px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow-y: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  transform: translate(0%, 0%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: contain;
+  max-width: 100%;
+  z-index: 10;
+  background-image: url(../images/about-images/about-bgmilk-mob.png);
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url(../images/about-images/about-bgmilk-mob@2x.png);
+  }
+
+  @include tablet {
     position: fixed;
-    top: 0%;
-      left: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 450px;
+    //  min-height: 450px;
+  }
+
+  @include desktop {
+    // max-height: 570px;
+  }
+
+  .about-menu.hidden {
+    transform: translate(-50%, -50%) scale(0.75);
+    opacity: 0;
+  }
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    //  gap: 30px;
+    justify-content: space-between;
+    max-height: 100%;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-     overflow-y: auto;
-     overflow: hidden;
-    border-radius: 20px;
-    transform: translate(0%, 0%);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-size: contain;
-      max-width: 100%;
-      z-index: 10;
-      background-image: url(../images/about-images/about-bgmilk-mob.png);
-        background-position: top;
-        background-repeat: no-repeat;
-       
-        @include retina {
-          background-image: url(../images/about-images/about-bgmilk-mob@2x.png);}
-                     
-      @include tablet {
-          position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1);
-            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          max-width: 450px;
-          //  min-height: 450px;
-           
-        }
-       
-              
-      @include desktop {
-        // max-height: 570px;
-      }
+    padding: 0px;
+    max-width: 300px;
 
-      .about-menu.hidden {
-        transform: translate(-50%, -50%) scale(0.75);
-          opacity: 0;
-      }
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .container-menu {
-      display: flex;
-       flex-direction: column;
-      //  gap: 30px;
-      justify-content: space-between;
-      max-height: 100%;
-      width: 100%;
-      padding: 0px;
-      max-width: 300px;
-      
-      margin-left: auto;
-      margin-right: auto;
-      
-    }
-  
   @include tablet {
     display: block;
     gap: 0px;
-  min-width: 450px;
+    min-width: 450px;
     max-height: 570px;
   }
 
   @include desktop {
-     gap: 0px;
+    gap: 0px;
     // max-height: 570px;
     margin-left: 0px;
     margin-right: 0px;
@@ -306,8 +304,6 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
   }
 }
 
-
-  
 .container__about {
   position: relative;
 }
@@ -355,12 +351,12 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
   height: 30px;
   transform: rotate(0deg);
   background-color: #0000;
-    border: 1px solid #d41443;
+  border: 1px solid #d41443;
   border-radius: 50%;
   position: absolute;
   top: 10px;
   right: 10px;
- 
+
   @include desktop {
     top: 20px;
     right: 20px;
@@ -372,22 +368,21 @@ background-image: url(../images/about-images/about-bgmilk-desk.png);
   width: 16px;
   height: 16px;
   transform: rotate(-100);
-    transition: 250ms transform var(--timing-animation);
+  transition: 250ms transform var(--timing-animation);
   display: flex;
-    &:hover,
-    &:focus {
-      transform: rotate(180deg);
-    }
+  &:hover,
+  &:focus {
+    transform: rotate(180deg);
+  }
 }
 
 .about-list {
-    
-   display: block;
-    @include tablet {
-display: inline-flex;
-    gap: 32px;}
-    @include desktop{
-      
-        gap: 99px;
-    }
+  display: block;
+  @include tablet {
+    display: inline-flex;
+    gap: 32px;
+  }
+  @include desktop {
+    gap: 99px;
+  }
 }
