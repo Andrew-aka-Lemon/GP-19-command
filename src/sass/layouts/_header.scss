@@ -5,7 +5,6 @@
     width: 100%;
     font-weight: 700;
     z-index: 5;
-    // background-color: pink;
 
     @include tablet{
         margin-top: 32px;
@@ -45,14 +44,26 @@
     gap: 35px;
 }
 
+.header__item{
+    transition: all 250ms var(--timing-animation);
+
+    &:focus, &:hover{
+        transform: scale(1.02);
+        transition: all 250ms var(--timing-animation);
+    }
+}
+
 .header__link {
     font-size: 16px;
     line-height: calc(21 / 16);
     color: var(--light-text-color);
+    transition: all 250ms var(--timing-animation);
 
     &:hover,
     &:focus {
         color: var(--accent-color);
+        transition: all 250ms var(--timing-animation);
+        
     }
 }
 
@@ -105,10 +116,14 @@
 
     cursor: pointer;
 
+    transition: all 250ms var(--timing-animation);
+
     &:hover,
     &:focus {
         background-color: #ECEBEB;
         transform: scale(1.02);
+        transition: all 250ms var(--timing-animation )  ;
+      
     }
 
     @include tablet {
@@ -152,6 +167,7 @@
     
         color: var(--accent-color);
         background-color: var(--main-bg-color);
+        transition: all 250ms var(--timing-animation);
 
         @include tablet{
             width: 186px;
@@ -161,6 +177,7 @@
         &:focus {
             background-color: #ECEBEB;
             transform: scale(1.02);
+            transition: all 250ms var(--timing-animation);
         }
 
         &::after{
@@ -181,34 +198,6 @@
                 }
         }
 }
-
-
-// .icon-conatiner {
-//     // position: relative;
-//     margin-left: 12px;
-//     background-image: url("../images/svg/continiue.svg");
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     width: 4px;
-//     height: 8px;
-//     transform: translateY(2px);
-
-   
-// }
-
-// .mob-icon-conatiner {
-//     margin-left: 16px;
-//         background-image: url("../images/svg/continiue.svg");
-//         background-size: contain;
-//         background-repeat: no-repeat;
-//         width: 5.5px;
-//         height: 8px;
-//         transform: translateY(1.5px);
-//         @include tablet{
-//             margin-right: 14px;
-//             width: 4.5px;
-//         }
-// }
 
 .hide-mob {
 
@@ -247,7 +236,7 @@
     visibility: visible;
         opacity: 1;
         transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
-        // transition: all 1000ms var(--timing-animation);
+
 
     @include tablet {
         width: 254px;
@@ -289,22 +278,32 @@
     padding: 11px 0;
     padding-left: 20px;
     border-bottom: 1px solid #E18298;
+    transition: all 250ms var(--timing-animation);
+    color: var(--light-text-color);
+    
 
     &:first-child {
         border-top: 1px solid #E18298;
     }
+
+    &:focus,&:hover{
+        color: var(--accent-color);
+            transition: all 250ms var(--timing-animation);
+    transform: scale(1.02);
+    transition: all 250ms var(--timing-animation);
+    }
 }
 
 .mob-menu__link {
+
     font-size: 14px;
     line-height: calc(18 / 14);
-    color: var(--light-text-color);
+    color: inherit;
 
-    &:focus,
-    &:hover {
-        transform: scale(1.02);
-        color: var(--accent-color);
-    }
+    width: inherit;
+
+    
+   
 }
 
 .mob-menu__link--accent {
@@ -319,10 +318,7 @@
 
 .mob-menu.mob-menu--hide {
     transform: translateX(200%);
-    // scale: 0;
 
-    // opacity: 0;
-    // transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
     transition: all 1000ms var(--timing-animation);  
     pointer-events: none;
     visibility: hidden;
