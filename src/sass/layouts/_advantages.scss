@@ -49,7 +49,7 @@
 
   &__item-style {
     @include font(36px, 400, 1.14, 0.04em);
-    width: 98px;
+    width: auto;
     height: 56px;
     font-family: 'Titan One';
     text-transform: uppercase;
