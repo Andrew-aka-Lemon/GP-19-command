@@ -83,6 +83,7 @@ li {
     width: 100%;
     height: 489px;
     position: relative;
+    box-shadow:none;
 
     @include mobile {
     width: 280px;
@@ -101,6 +102,11 @@ li {
         height: 535px;
         margin-top: 0px;
         margin-right: 32px;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow:0 8px 30px #4340401a;
     }
 
 }
@@ -162,6 +168,7 @@ background-image: url("../images/products-images/product2-mob@2x.png");
         width: 368px;
         height: 535px;
         }
+        
     }
 
 .item__products:first-child::before {
@@ -219,6 +226,7 @@ background-image: url("../images/products-images/product1-mob@2x.png");
         width: 368px;
         height: 535px;
     }
+    
 }
 
 
@@ -370,8 +378,9 @@ margin-left: 41px;
 
     &:hover,
     &:focus {
-    transform: scale(104%);
+    transform: scale(109%);
     transition: transform 250ms var(--timing-animation);
+    
     }
 }
 
@@ -384,7 +393,7 @@ margin-left: 41px;
     width: 100%;
     height: 100%;
     
-    background: rgba(0, 0, 0, 0);
+    background-color: #0003;
     opacity: 1;
     overflow-y: scroll;
     z-index: 2;
@@ -402,7 +411,7 @@ margin-left: 41px;
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
+    min-width: 224px;
     min-height: 320px;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
@@ -500,25 +509,54 @@ margin-left: 41px;
     margin-bottom: 12px;
     }
 
-.ice-cream__video {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+
+
+.scroll-up {
+    display: none;
+    @include desktop  {
+        display: flex;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    cursor: pointer;
+    background-color:var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    animation: slide-top 1s linear 2s infinite alternate both;
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transform: scale(100%);
+    transition: transform 250ms var(--timing-animation),
+    background-color 250ms var(--timing-animation);
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    transform: scale(108%);
+    transition: transform 250ms var(--timing-animation);
+    transform: rotate(180deg);
+    transition: 0.5s;
     }
+}
+  }
 
-.video {
-    min-width: 100%;
-margin-bottom: 10px ;
-display: block;
-border-radius: 24px;
-@include mobile {
-    min-height:250px; 
-    margin-top: 0px; 
-}
-
-@include tablet {
-    min-height:360px; 
-    margin-top: 0px; 
-}
-}
+  .top-btn{
+    width: 24px;
+    height: 42px;
+    margin: 10px;
+    transform: rotate(0deg);
+    transition: 0.5s;
+  }
+  
+  .scroll-up:hover .top-btn {
+    transform: fill var(--transition-hover);
+    &:hover {
+        transform: rotate(180deg);
+        transition: 0.5s;
+        }
+  }
