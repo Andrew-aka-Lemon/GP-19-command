@@ -360,6 +360,7 @@
     background-color: transparent;
     right: 5%;
     top: 20;
+    z-index: 6;
 
     @include tablet{
         right: 28%;
@@ -373,7 +374,7 @@
     }
 
     &.open{
-        z-index: 55;
+        // z-index: 55;
 
         @include tablet{
             position: fixed;
