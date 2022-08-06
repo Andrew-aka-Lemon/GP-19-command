@@ -1,4 +1,5 @@
 .gallery {
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
     @include desktop {
@@ -9,8 +10,8 @@
     margin-right: auto;
     display: block;
     background-image: linear-gradient(to bottom,
-            #FFF5F6 34%,
-            #FFFFFF 34%,
+            #FFF5F6 28%,
+            #FFFFFF 28%,
         );
     background-position: center;
     background-size: cover;
@@ -25,128 +26,118 @@
 
     @include desktop {
         background-image: linear-gradient(to bottom,
-                #FFF5F6 27%,
-                #FFFFFF 27%,
+                #FFF5F6 25%,
+                #FFFFFF 25%,
             );
     }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0 auto;
+    &__container {
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  
+      @include tablet {
+        max-width: 100%;
+        width: 768px;
+      }
+  
+      @include desktop {
+        width: 1200px;
+      }
     }
-}
-
-.gallery__column {
-    display: inline-block;
-    list-style: none;
-    justify-content: center;
-
-    &:not(:last-child) {
-        margin-right: 0.75%;
+  
+    &__second-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-}
-.gallery__item {
-    transition: transform 250ms var(--timing-animation);
-}
-
-.gallery__item:focus,
-.gallery__item:hover {
-    transform: scale(1.1);
-    transition: transform 250ms var(--timing-animation);
-}
-
-.column-position1 {
-    .gallery__item:last-child {
-        padding-bottom: 4%;
-
-        @include tablet {
-            padding-bottom: 5%;
-        }
+  
+    &__box--up {
+      margin-bottom: 20px;
+  
+      @include tablet {
+        margin-bottom: 50px;
+      }
+  
+      @include desktop {
+        margin-bottom: 70px;
+      }
+    }
+  
+    &__box {
         @include desktop {
-            padding-bottom: 4%;
-        }
+        padding: 6px 3px 6px 3px;
+      }
     }
-}
-
-.column-position2 {
-    .gallery__item:first-child {
-        padding-top: 22%;
-        margin-bottom: 4%;
-
-        @include tablet {
-            padding-top: 23%;
-            margin-bottom: 5%;
-        }
-        @include desktop {
-            margin-bottom: 6%;
-        }
-    }
-}
-
-.column-position3 {
-    .gallery__item:first-child {
-        @include desktop {
-            width: 100%;
-        }
-    }
-
-    .gallery__item:last-child {
-        max-width: 50%;
-        margin-top: 2%;
-
-        @include tablet {
-            margin-top: 3%;
-        }
-    }
-}
-
-.column-position4 {
-    .gallery__item:first-child {
-        padding-top: 36%;
-        margin-bottom: 4%;
-
-        @include tablet {
-            padding-top: 38%;
-            margin-bottom: 5%;
-        }
-        @include desktop {
-            margin-bottom: 6%;
-        }
-    }
-}
-
-.column-position5 {
-    .gallery__item:last-child {
-        padding-bottom: 25%;
-        margin-top: 4%;
-
-        @include tablet {
-            padding-bottom: 10%;
-            margin-top: 5%;
-        }
-        @include desktop {
-            margin-top: 6%;
-        }
-    }
-}
-
-.column-position6 {
-    .gallery__item:first-child {
-        padding-top: 12%;
-
-        @include tablet {
-            padding-top: 13%;
-        }
-    }
-}
-
-.gallery__image {
-    border-radius: 8px;
-
-    @include tablet {
+  
+    &__image {
+      padding: 0;
+      margin: 2px 1px 2px 1px;
+      width: 39px;
+      border-radius: 5px;
+      transform: scale(1);
+  
+      transition-property: width;
+      transition-duration: 700ms;
+      transition-timing-function: linear;
+      transition-delay: 0;
+  
+      @include tablet {
+        width: 85px;
+        margin: 4px 2px 4px 2px;
+        border-radius: 12px;
+      }
+  
+      @include desktop {
+        width: 138px;
         border-radius: 20px;
+      }
+  
+      &:hover {
+        width: 60px;
+  
+        @include tablet {
+          width: 130px;
+        }
+  
+        @include desktop {
+          width: 250px;
+        }
+      }
     }
-}
+  
+    &__image--bigger {
+      width: 80px;
+  
+      @include tablet {
+        width: 174px;
+      }
+  
+      @include desktop {
+        width: 284px;
+      }
+  
+      transition-property: width;
+      transition-duration: 500ms;
+      transition-timing-function: linear;
+      transition-delay: 0;
+  
+      &:hover {
+        width: 100px;
+  
+        @include tablet {
+          width: 217px;
+        }
+  
+        @include desktop {
+          width: 354px;
+        }
+      }
+    }
+  }
+  
