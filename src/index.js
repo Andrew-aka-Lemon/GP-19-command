@@ -1,5 +1,5 @@
 ///////Counter for hero & advantages./////////////////
-const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+const counterAnim = (qSelector, start = 0, end, duration = 3000) => {
  const target = document.querySelector(qSelector);
  let startTimestamp = null;
  const step = (timestamp) => {
@@ -15,11 +15,11 @@ const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
 //#endregion - end of - number counter animation
 
 document.addEventListener("DOMContentLoaded", () => {
- counterAnim("#count1", 0, 16, 1000);
- counterAnim("#count2", 0, 23, 1000);
- counterAnim("#count3", 0, 721, 1000);
- counterAnim("#count4", 0, 16, 1000);
- counterAnim("#count5", 0, 84, 1000);
+ counterAnim("#count1", 0, 16, 3000);
+ counterAnim("#count2", 0, 23, 3000);
+ counterAnim("#count3", 0, 721, 3000);
+ counterAnim("#count4", 0, 16, 3000);
+ counterAnim("#count5", 0, 84, 3000);
  
 });
 
