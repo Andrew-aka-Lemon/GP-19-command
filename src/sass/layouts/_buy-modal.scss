@@ -379,16 +379,25 @@
     display: block;
     text-align: center;
     margin: auto;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    animation: beat .7s infinite alternate;
+    transform-origin: center;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: width 250ms var(--timing-animation),
       height 250ms var(--timing-animation);
   
       &:hover {
+          animation: none;
           width: 203px;
           height: 51px;
-            color: var(--accent-color);
+          color: var(--accent-color);
         }
   }
+
+    @keyframes beat {
+      to {
+        transform: scale(1.1);
+      }
+    }
   
   
   
