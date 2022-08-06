@@ -1,27 +1,27 @@
 //  Maxim Bogdan - script for header mobile menu and buy-now modal window
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector('.header-menu__button'),
+    toggleMenuBtn: document.querySelector('.nav-icon'),
     closeMenuBtn: document.querySelector('.menu-close-btn'),
     menu: document.querySelector('.mob-menu'),
     body: document.querySelector('body'),
-    HeaderMenuOpen: document.querySelector('.header-menu__button'),
-    HeaderModalBtn: document.querySelector('.modal-button-header'),
+    // HeaderMenuOpen: document.querySelector('.nav-icon1'),
+    HeaderModalBtn: document.querySelector('.hide-mob'),
     mobMenuLink: document.querySelectorAll('.mob-menu__link'),
   };
 
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.toggleMenuBtn.addEventListener('click', toggleMenu)
 
   for (let index = 0; index < refs.mobMenuLink.length; index++) {
     refs.mobMenuLink[index].addEventListener('click', toggleMenu);
   }
 
   function toggleMenu() {
+    refs.toggleMenuBtn.classList.toggle('open');
     refs.menu.classList.toggle('mob-menu--hide');
     refs.body.classList.toggle('prevent-scroll');
-    refs.HeaderMenuOpen.classList.toggle('hidden');
-    refs.HeaderModalBtn.classList.toggle('hidden');
+    // refs.HeaderMenuOpen.classList.toggle('hidden');
+    refs.HeaderModalBtn.classList.toggle('hide');
   }
 
   const modalBtn = {
