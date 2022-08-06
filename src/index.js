@@ -1,3 +1,28 @@
+///////Counter for hero & advantages./////////////////
+const counterAnim = (qSelector, start = 0, end, duration = 3000) => {
+ const target = document.querySelector(qSelector);
+ let startTimestamp = null;
+ const step = (timestamp) => {
+  if (!startTimestamp) startTimestamp = timestamp;
+  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+  target.innerText = Math.floor(progress * (end - start) + start);
+  if (progress < 1) {
+   window.requestAnimationFrame(step);
+  }
+ };
+ window.requestAnimationFrame(step);
+};
+//#endregion - end of - number counter animation
+
+document.addEventListener("DOMContentLoaded", () => {
+ counterAnim("#count1", 0, 16, 3000);
+ counterAnim("#count2", 0, 23, 3000);
+ counterAnim("#count3", 0, 721, 3000);
+ counterAnim("#count4", 0, 16, 3000);
+ counterAnim("#count5", 0, 84, 3000);
+ 
+});
+
 //  Maxim Bogdan - script for header mobile menu and buy-now modal window
 (() => {
   const refs = {
