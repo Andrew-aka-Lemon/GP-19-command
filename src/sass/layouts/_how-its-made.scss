@@ -1,3 +1,4 @@
+
 .about-product__name {
   justify-content: center;
   text-align: center;
@@ -21,18 +22,6 @@
   }
 }
 
-// .container-about {
-//   background-size: contain;
-//   max-width: 100%;
-//   z-index: 1;
-//   @include tablet {
-//     background-image: none;
-//   }
-//   @include desktop {
-//     max-width: 100%;
-//     z-index: 1;
-//   }
-// }
 
 .about__product {
   background-size: contain;
@@ -102,7 +91,79 @@
   @include desktop {
     width: 501px;
   }
+    
 }
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    -ms-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    -ms-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    -ms-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    -ms-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    -ms-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+.swing:hover {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
 
 .about-item {
   font-family: 'DM Sans';
@@ -244,7 +305,10 @@
   max-height: 600px;
   z-index: 1;
   overflow-y: auto;
-  overflow: hidden;
+  overflow-x: hidden ;
+  scrollbar-darkshadow-color: #5997CA;
+  
+    scrollbar-track-color: #F6F6F6;
   border-radius: 20px;
 
   transform: translate(-50%, -50%);
@@ -274,7 +338,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     max-width: 450px;
-    //  min-height: 450px;
+    
   }
 
   @include desktop {
@@ -291,6 +355,21 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+    
+}
+
+.about-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.about-menu::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+
+.about-menu::-webkit-scrollbar-thumb {
+  background-color: #d41443;
+  border-radius: 4px;
+  border: 2px solid #FFFFFF;
 }
 
 .container-menu {
