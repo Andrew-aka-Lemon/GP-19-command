@@ -118,7 +118,9 @@ li {
     transform: translateY(-50%);
 
     background-image: url("../images/products-images/product2-mob.png");
-@include retina{
+
+
+    @include retina{
 background-image: url("../images/products-images/product2-mob@2x.png");
 }
 
@@ -308,21 +310,10 @@ background-image: url("../images/products-images/product3-mob@2x.png");
     height: 6px;
     justify-content: center;
     transform: translateY(-50%);
-    @keyframes pulsing {
-        0% {
-          -webkit-transform: scale(0.5, 0.5);
-          transform: scale(0.5, 0.5)
-        }
-        50% {
-          -webkit-transform: scale(1.0, 1.0);
-          transform: scale(1.0, 1.0);
-        }
-        100% {
-          -webkit-transform: scale(0.5, 0.5);
-          transform: scale(0.5, 0.5);
-        }
-      }
+
     }
+
+
 
 .text__products {
 font-family: 'DM Sans';
@@ -392,7 +383,6 @@ margin-left: 41px;
     
     background-color: #0003;
     opacity: 1;
-    overflow-y: scroll;
     z-index: 2;
 }
 
@@ -410,10 +400,12 @@ margin-left: 41px;
     position: absolute;
     top: 50%;
     left: 50%;
-   
+
+    border-radius: 24px;
+    background-color: #ffffff;
+    
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
-    border-radius: 4px;
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -428,32 +420,17 @@ margin-left: 41px;
 
     @include mobile {
         min-width: 320px;
+        height: 420px;
         margin-top: 0px; 
     }
 
     @include tablet {
-        height: 320px; 
+        height: 420px; 
         }
-    
+        @include desktop {
+            height: 320px;
+        }
     }
-
-
-.ice-cream {
-        background-color: #FFB8CA;
-        border-radius: 24px
-    
-    }
-
-.ice-coffee {
-        background-color:#F0D1A5 ;
-        border-radius: 24px
-    }
-
-.milkshakes {
-        background-color:   #C2E297;
-        border-radius: 24px
-    }
-   
 
 .modal-prd-bnt_close {
     display: flex;
@@ -495,7 +472,7 @@ margin-left: 41px;
 .products-modal__text {
     text-align: center;
     letter-spacing: .04em;
-    color: #fff;
+    color:- var(--secondary-text-color);
     margin-top: 32px;
     margin-bottom: 15px;
     margin-left: 41px;
@@ -507,6 +484,140 @@ margin-left: 41px;
     line-height: 176%;
 }
 
+.modal__open{
+    position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 210px;
+    
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 37px;
+        padding-right: 37px;
+        height: 44px;
+        border-radius: 22px;
+    
+        font-weight: 700;
+        font-size: 16px;
+        line-height: calc(21 / 16);
+        text-align: center;
+    
+        color: var(--accent-color);
+        fill: currentColor;
+        background-color: var(--background-color);
+        transition: all 250ms var(--timing-animation);
+
+        animation-name: modal__open-pulsing;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        @include tablet{
+            width: 186px;
+        }
+    
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            background-color: var(--accent-color);
+            transform: scale(1.02);
+            transition: all 250ms var(--timing-animation);
+            animation-name:none;
+        }
+
+}
+
+.modal__open__icon{
+    position: absolute;
+    right: 45px;
+    margin-top: 2.5px;
+    border: 5px;
+}
+        @keyframes modal__open-pulsing{
+            0%{
+                transform: scale(1);
+            }
+            10%{
+                transform: scale(1.1);
+            }
+            20%{
+                transform: scale(1);
+            }
+            30%{
+                transform: scale(1.1);
+            }
+            40%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+            60%{
+                transform: scale(1);
+            }
+            70%{
+                transform: scale(1.1);
+            }
+            80%{
+                transform: scale(1);
+            }
+            90%{
+                transform: scale(1.1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+
+
+
+.footer-form__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--btn-color-hb);
+    box-shadow: 0px 4px 4px rgba(0,0,0,.15);
+    border-radius: 4px;
+    border-color: rgba(0,0,0,0);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    padding-left: 29px;
+    color: #fff;
+    fill: currentColor;
+    transition: fill var(--timing-duration) var(--timing-function);
+    transition: background-color var(--timing-duration) var(--timing-function);
+}
+::-webkit-scrollbar{ 
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d41443;
+  }
+
+.modal__products::-webkit-scrollbar{ 
+    width: 10px;
+    z-index: 1;
+}
+.modal__products::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d41443;
+  }
+
+  .modal__products::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border-color: #e0dddd;
+    background-color: #e0dddd;
+  }
+
+
 .scroll-up {
     display: none;
 
@@ -515,7 +626,7 @@ margin-left: 41px;
     z-index: 2;
     width: 40px;
     height: 40px;
-    // opacity: 0.3;
+    opacity: 0.3;
     cursor: pointer;
     background-color:var(--accent-color);
     border: none;
@@ -536,35 +647,20 @@ margin-left: 41px;
         opacity: 1;
     transform: scale(108%);
     transition: transform 250ms var(--timing-animation);
-    transform: rotate(180deg);
-    transition: 0.5s;
     }
 }
   }
 
-  .top-btn{
+  .top-btn__icon{
     width: 24px;
     height: 42px;
     margin: 10px;
     transform: rotate(0deg);
     transition: 0.5s;
+    color: #fff;
+    fill: currentColor;
   }
   
-  .scroll-up:hover .top-btn {
+  .scroll-up:hover .top-btn__icon {
     transform: fill var(--transition-hover);
-    &:hover {
-        transform: rotate(180deg);
-        transition: 0.5s;
-        }
-  }
-
-
-//   .element-animation {
-//     opacity: 0;
-//     transform: translateY(100%);
-//   }
-//   .element-animation.element-show {
-//     opacity: 1;
-//     transition: all 1s;
-//     transform: translateY(0%);
-//   }
+    }
