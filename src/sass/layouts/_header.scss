@@ -7,7 +7,7 @@
     z-index: 5;
 
     @include tablet{
-        margin-top: 32px;
+        margin-top: 16px;
     }
 
     @include desktop{
@@ -15,9 +15,14 @@
     }
 
     .container {
+        position: relative;
         display: flex;
         margin: 0 auto;
         align-items: center;
+        
+        @include tablet{
+            justify-content: space-between;
+        }
 
     }
 }
@@ -71,36 +76,33 @@
     color: var(--accent-color);
 }
 
-
-.header-menu__button {
-    display: block;
-    background-color: transparent;
-    background-image: url("../images/svg/Burger.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 12px;
-    margin-left: auto;
-    cursor: pointer;
-
-    transition: all var(--timing-animation) 1000ms;
-
-    @include tablet {}
-
-    @include desktop {
-        display: none;
-    }
+.hide{
+    display: none;
 }
 
+// .header-menu__button {
+//     display: block;
+//     background-color: transparent;
+//     background-image: url("../images/svg/Burger.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     width: 20px;
+//     height: 12px;
+//     margin-left: auto;
+//     cursor: pointer;
+
+//     transition: all var(--timing-animation) 1000ms;
+
+//     @include desktop {
+//         display: none;
+//     }
+// }
+
 .modal-button-header {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-
     width: 210px;
-
-    margin-right: auto;
-    margin-left: auto;
     padding-left: 37px;
     padding-right: 37px;
     height: 44px;
@@ -128,7 +130,7 @@
 
     @include tablet {
         display: flex;
-        margin-left: 32px;
+        margin-left: auto;
         width: 160px;
     }
 
@@ -199,19 +201,22 @@
         }
 }
 
-.hide-mob {
+// .hide-mob {
 
-    display: none;
+//     @media screen and (max-width:767px) {
+//          display: none;
+//     }
 
+   
 
-    @include tablet {
-        display: block;
-    }
+//     // @include tablet {
+//     //     display: block;
+//     // }
 
-    @include desktop {
-        margin-left: auto;
-    }
-}
+//     // @include desktop {
+//     //     margin-left: auto;
+//     // }
+// }
 
 .mob-menu-container {
     margin-top: 60px;
@@ -232,15 +237,14 @@
     background-color: #E17992;
     font-weight: 700;
     z-index: 5;
-    pointer-events: all;
-    visibility: visible;
-        opacity: 1;
-        transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
-
+    opacity: 1;
+    transition: transform 1000ms var(--timing-animation), translate 1000ms var(--timing-animation);
+    overflow: hidden;
 
     @include tablet {
         width: 254px;
-        right: 0;
+        right: 0%;
+        
     }
     @include desktop{
         display: none;
@@ -322,6 +326,10 @@
     transition: all 1000ms var(--timing-animation);  
     pointer-events: none;
     visibility: hidden;
+
+    @include tablet{
+        transform: translateX(100%);
+    }
 }
 
 
@@ -341,3 +349,85 @@
 }
 
 
+///burger////
+.nav-icon {
+    display: flex;
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: all 500ms cubic-bezier(1, 0, 0, 1) ;
+    background-color: transparent;
+    right: 5%;
+    top: 20;
+    z-index: 6;
+
+    @include tablet{
+        right: 28%;
+    }
+   
+    
+    
+
+    @include desktop {
+        display: none;
+    }
+
+    &.open{
+        // z-index: 55;
+
+        @include tablet{
+            position: fixed;
+            top: 20;
+            right: 15;
+
+
+        }
+        
+    }
+}
+
+.nav-icon span {
+    position: fixed;
+    height: 1px;
+    width: 100%;
+    background: var(--accent-color);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 500ms var(--timing-animation);
+}
+
+.nav-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 6px;
+}
+
+.nav-icon span:nth-child(3) {
+    top: 12px;
+}
+
+.nav-icon.open span:nth-child(1) {
+    top: 6px;
+   
+    
+        transform: rotateZ(-405deg)  ;
+        background-color: #ffffff;
+}
+
+.nav-icon.open span:nth-child(2) {
+    opacity: 0;
+    
+}
+
+.nav-icon.open span:nth-child(3) {
+    top: 6px;
+    
+
+    transform: rotateZ(405deg)  ;
+    background-color: #ffffff;
+}

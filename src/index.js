@@ -1,27 +1,52 @@
+///////Counter for hero & advantages./////////////////
+const counterAnim = (qSelector, start = 0, end, duration = 3000) => {
+ const target = document.querySelector(qSelector);
+ let startTimestamp = null;
+ const step = (timestamp) => {
+  if (!startTimestamp) startTimestamp = timestamp;
+  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+  target.innerText = Math.floor(progress * (end - start) + start);
+  if (progress < 1) {
+   window.requestAnimationFrame(step);
+  }
+ };
+ window.requestAnimationFrame(step);
+};
+//#endregion - end of - number counter animation
+
+document.addEventListener("DOMContentLoaded", () => {
+ counterAnim("#count1", 0, 16, 3000);
+ counterAnim("#count2", 0, 23, 3000);
+ counterAnim("#count3", 0, 721, 3000);
+ counterAnim("#count4", 0, 16, 3000);
+ counterAnim("#count5", 0, 84, 3000);
+ 
+});
+
 //  Maxim Bogdan - script for header mobile menu and buy-now modal window
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector('.header-menu__button'),
+    toggleMenuBtn: document.querySelector('.nav-icon'),
     closeMenuBtn: document.querySelector('.menu-close-btn'),
     menu: document.querySelector('.mob-menu'),
     body: document.querySelector('body'),
-    HeaderMenuOpen: document.querySelector('.header-menu__button'),
-    HeaderModalBtn: document.querySelector('.modal-button-header'),
+    // HeaderMenuOpen: document.querySelector('.nav-icon1'),
+    HeaderModalBtn: document.querySelector('.hide-mob'),
     mobMenuLink: document.querySelectorAll('.mob-menu__link'),
   };
 
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.toggleMenuBtn.addEventListener('click', toggleMenu)
 
   for (let index = 0; index < refs.mobMenuLink.length; index++) {
     refs.mobMenuLink[index].addEventListener('click', toggleMenu);
   }
 
   function toggleMenu() {
+    refs.toggleMenuBtn.classList.toggle('open');
     refs.menu.classList.toggle('mob-menu--hide');
     refs.body.classList.toggle('prevent-scroll');
-    refs.HeaderMenuOpen.classList.toggle('hidden');
-    refs.HeaderModalBtn.classList.toggle('hidden');
+    // refs.HeaderMenuOpen.classList.toggle('hidden');
+    refs.HeaderModalBtn.classList.toggle('hide');
   }
 
   const modalBtn = {
