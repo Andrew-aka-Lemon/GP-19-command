@@ -1,6 +1,7 @@
 .section-advantages {
   padding-bottom: 30px;
   background-color: var(--secondary-bg-color);
+  position: relative;
 
   @include tablet {
     padding-bottom: 30px;
@@ -132,5 +133,67 @@
 
 .wrap{
   display: flex;
+}
+
+
+
+.advantages__moving {
+  width: 92px;
+    height: 70px;
+    align-items: flex-end;
+    animation-name: runCow;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+
+
+
+.advantages__moving:hover {
+  animation-play-state: paused;
+}
+
+.advantages__animation {
+      animation-name: changeCow;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+
+
+@keyframes runCow {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-1600px);
+  }
+}
+
+@keyframes changeCow {
+  0% {
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -10deg;
+  }
+}
+
+.advantages__icon-cow {
+
 }
 
